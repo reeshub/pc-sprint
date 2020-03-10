@@ -1,0 +1,396 @@
+     1. DESCRIPTION
+
+        PC-SPRINT is a low cost ($25 - $50) speed up for the IBM PC/XT that
+     you can build yourself. It can achieve processor performance increases
+     of up to 2 times normal, does not use an expansion slot, doesn't make
+     any permanent changes to the computer and maintains software
+     compatibility without restrictions. As an additional bonus, it adds a
+     true hardware reset - no more "keyboard lockup".
+     
+        PC-SPRINT is also an experiment to determine if hardware designs
+     can be placed in the public domain, as a type of "freeware", and be
+     distributed by electronic means only. This package contains all the
+     information needed to build PC-SPRINT, including instructions,
+     schematics, part placement diagrams, and precision artwork from which
+     a printed circuit board can be made. Although this sounds rather
+     formidable, PC-SPRINT should be within the capabilities of the average
+     electronic hobbyist. I would appreciate your comments on this project,
+     and the experiment in general. You are welcome to send me a note at
+     the following address.
+
+                      Doug Severson
+                      7431 W. Southview Dr.
+                      Franklin, Wi. 53132
+
+     2. CAVEATS
+     
+        As an old "hardware hacker", I consider this project simple and
+     straight forward - but that's easy for me to say. If you feel nauseous
+     at the mere thought of removing your PC's cover, pass this up or get
+     help. Maybe your user's group could arrange to have some made at
+     reasonable cost.
+     
+        The claims made here are real - this package was done on a PC
+     running an 8 megahertz (mhz) V20 processor at 7.37 mhz. The actual
+     performance increase provided by PC-SPRINT depends on what your
+     particular computer can handle, and on choice of processor. In my
+     case, the faster clock provides a factor of 1.55X (7.37/4.77); the V20
+     is variously rated at 1.1 to 1.4X over an 8088 at the same clock,
+     giving an overall factor somewhere between 1.7 and 2.1X.
+     
+        Unfortunately, a 7.37 mhz clock, with no "wait states", pushes the
+     PC's design to its limit. Your particular setup may not be capable of
+     full speed, but with a simple component change to PC-SPRINT (explained
+     later), you can find your machines maximum. If your PC has a 5 mhz
+     8087 (number cruncher chip), it must also be replaced along with your
+     original 8088.
+
+        If you do decide to give this a try, check one very important
+     detail before committing any time or money - PC-SPRINT depends on
+     replacing the PC's 8284A clock IC with a circuit board - on most PC's
+     and XT's I've seen, this chip is socketed and easily removeable.
+     However, this is not true for all machines. Using the directions given
+     in the installation section, open up your PC, locate its 8284A, and
+     make sure it is in a socket. If not, you must unsolder it from the
+     motherboard and put a socket in its place. This isn't too difficult,
+     but may not worth the effort.
+
+     3. CONSTRUCTION
+
+        The parts list shows all components needed to build PC-SPRINT;
+     Radio Shack catalog numbers are given for some parts as a reference.
+     Most items should be available by mail order - check the ads in BYTE
+     or RADIO ELECTRONICS. As resistor/capacitor values are not critical,
+     substitutions can be made freely - but try to keep within +/- 10%.
+     Make sure that the processor you order (8088 or V20) is rated at 8
+     mhz. Its also a good idea to get extra crystals (18.342 mhz or 20 mhz)
+     just in case your PC won't run at full speed. The external switches
+     can be mounted in any convenient manner, but the plastic box specified
+     is handy and cheap. If you can't locate the terminal strip for the
+     cable, it can be directly soldered in the board, but this will make
+     routing the cable more difficult. The square pads on the top of the 2x
+     artwork mark pin 1 of IC's, + side of polarized capacitors, and cathode
+     side of diodes.
+     
+        The key to building PC-SPRINT is making a printed circuit board
+     from the provided artwork. This mainly entails duplicating (at 1X
+     size) the circuit pattern on a blank copper board, then "etching" away
+     the unused copper not covered by the pattern. Several manual or
+     photographic techniques are possible, using materials made for the
+     purpose. Check with local electronic parts distributors for products
+     or complete kits made by Radio Shack, DATAK, Kepro or G-C Electronics.
+
+        I have included 1X and 2X artwork for both sides of the circuit
+     board. Because of printer resolution, the 1X version is really only
+     useful as a placement/routing guide if you manually copy the pattern;
+     use the 2X for details. You do not have to make the board double-sided
+     - although that makes a neater job of it - just do the bottom and
+     duplicate the top connections with 30 gauge wire. The 2X artwork is
+     very accurate and "camera ready". For both 1X and 2X versions, the
+     "top" or component side, is shown as you would actually view the board
+     from the top. The bottom (solder side) is shown as you would see it if
+     you could look "through" the board from the top; thus it is a "mirror"
+     image and must be flipped over to see how it would be if you saw it
+     from the bottom. This may be confusing, but is standard practice, and
+     really presents no problem for photographic techniques as the negative
+     can be turned over for actual transfer to the board.
+
+         Here is a list of some of the ways the board can be made. If you
+     use the 2X artwork directly, check for horizontal breaks on the
+     printout; I've noticed that some printers "drag" a print pin
+     occasionally when doing graphics - the effect should be obvious if it
+     happens.
+     
+        1) The easiest method is to draw the pattern directly on the bare
+     board, using a special etch resist pen ( available at Radio Shack).
+     This will work, but will likely give poor results.
+        2) Standard pressure sensitive patterns can be purchased (also at
+     RS) and used to duplicate the layout in a "cut and paste" manner on
+     the copper blank.
+        3) Using pressure sensitive patterns, copy the artwork on clear
+     plastic sheets, then contact print a negative using printed circuit
+     reversing film. The negative can then be used to contact print the
+     layout on special photo-sensitive copper boards.
+        4) The best technique is to have the supplied 2X artwork
+     photographically reduced to an actual size negative, then contact
+     print on photo-sensitive boards. A good photo shop can make the
+     negative.
+     
+        5) A variation of the last technique is to reduce the 2X artwork on
+     an ordinary reducing XEROX machine. A double reduction of 71% will be
+     close enough (0.71 x 0.71 = 0.5041) if the machine can't do half-size.
+     The last reduction can be on "transparency" film, and then used to
+     contact print a negative. Ordinary copier paper can be used, but
+     requires some furthur steps; you can make a "decal" using "lift-it"
+     film (available from electronic suppliers) or spray several coats of
+     clear acrylic on both sides of the paper to make it translucent (this
+     does work - but exposure time more than doubles). In either case,
+     check the final copy for flaws and "touch-up" where necessary with a
+     black fine tip marker.
+     
+        After the board is etched, cleaned and trimmed to size, check it
+     for shorts and breaks. Drill all holes with a #64 wire gauge drill bit
+     (use a small hand drill or "pin vise"). Slightly enlarge the holes for
+     the cable terminal strip.
+
+        Next, solder in the jumpers if you're using a single sided board,
+     or, if double sided, solder pieces of bare wire on both top and bottom
+     to make the feed through connections (see "feedthru sketch"). Trim off
+     excess wire.
+
+        Using the "partlist" drawing, place the diodes, resistors and
+     capacitors in the proper holes, forming the leads as you go, and
+     solder in place. Then place a small piece of cellophane tape on the
+     top of the board where the crystal will go to prevent the crystal's
+     case from shorting. Install the crystal vertically and solder in
+     place. Trim off excess wire.
+
+        Then install the two 18-pin "solder tail" IC sockets at U2 and U3,
+     and the 18-pin wire wrap socket at U1. Solder all socket connections.
+     Try not to get excess solder on the wire wrap pins, and make sure they
+     are properly connected. Finally, insert the terminal strip and solder
+     in place. Clean off solder flux with rubbing alcohol and a cotton
+     swab. Install the new 8284A in the socket at U3 to complete
+     construction of the board.
+
+        To make the switch box, remove the aluminum cover and drill two
+     holes (usually 1/4") for the switches; notch the plastic box for the
+     cable, and install the switches. Next cut the cable to length (3 to 4
+     feet), nick the insulation on both ends, and split the individual
+     wires apart for a length of 1 to 2 inches. Strip off 1/4" of
+     insulation from each wire end and solder either end of the cable to
+     the switches (use the schematic diagram for the proper connections).
+     It doesn't matter which wires are initially connected to which switch,
+     but write it down since you must know when you insert the cable on the
+     PC-SPRINT board. Make sure you have used the "normally-open" contacts
+     on the push button switch - otherwise, the computer will be held
+     "reset". Replace the switch box cover, placing the cable in the notch
+     so that it doesn't get damaged.
+
+     4. INSTALLATION
+
+        If you've gotten this far, the rest is easy. The general idea here
+     is to remove and replace the 8088, remove the original 8284A and put
+     it on PC-SPRINT, route the switch cable and install PC-SPRINT in place
+     of the 8284A. As you carry out the following directions, try not to
+     directly touch any chip legs, as static electricity could damage them.
+     Discharge yourself by occasionally touching some large piece of metal,
+     like the computers case.
+     
+        First, and most important, unplug the computers power cord from the
+     outlet to prevent any possibliity of shock. While you're at it,
+     disconnect all external cables (crt, keyboard, printers, modem, etc.)
+     to protect them from you and you from their power systems.
+     
+        Using the manufacturers directions, remove the computers case to
+     gain access to the motherboard.
+     
+        Locate the 8088 processor (40 pin chip), note the direction of the
+     notched end, and very carefully remove it. This may be done by
+     alternately prying up on the ends of the chip a little at a time until
+     it eases out (use a small screw driver or bent piece of metal).
+     Another method is to fashion a 3/8 inch wide, 12 inch long strip of
+     thin, flexible plastic, slide it beneath the chip from either open
+     end, fold upward, and pull on both ends with a rocking motion until
+     the chip pops out (be careful as the chip may fly out with
+     considerable force - keep your face well to the side). Put the old
+     processor into whatever protective packing the new one came in and
+     save it. Insert the new processor into the vacant socket, making sure
+     that the notched end is in the same direction as the original. You may
+     have to bend the chip legs to fit by pushing the chip sideways against
+     a flat surface so that all pins on a side deflect together. Try not to
+     exert excessive downward force on the motherboard as you push the new
+     chip into the socket.
+     
+        Find the 8284A (18 pin chip - note notch direction) and remove it
+     in a similar manner. On PC's, it's located close to the internal disk
+     drives, around the configuration switch. For XT's, it's towards the
+     back of the case next to the expansion slots. In either case look for
+     the metal crystal can - the 8284A will be very close by. Insert the
+     removed 8284A into the socket at position U2 on the PC-SPRINT board,
+     as shown by the parts diagram.
+     
+        At this time, route the flat cable from the switches into the
+     computer. Use any convenient path, but make sure that more than enough
+     cable is inside the computer to reach the original 8284A socket (and
+     then some). If you choose to run the cable over the back edge of the
+     chassis, rather than using a back plate hole, protect both sides with
+     electrical tape or use paper binder clips, on both sides, to force the
+     cover to "ride" over the cable. Now open the terminal strip (on the
+     bottom edge of the PC-SPRINT board) by pulling up on its plastic body,
+     insert the pre-stripped ends of the cable into the holes (wire 1 to
+     pin 1, etc), and close by pushing down on the body. Make sure the
+     cable is seated firmly.
+     
+        Carefully align the underside pins from the PC-SPRINT board with
+     the 8284A socket on the motherboard, checking that the chip notches
+     are in the original direction, and push down firmly until you feel it
+     "grab" in the socket. Check that all pins are seated in the socket (a
+     small mirror might be handy) and that the PC- SPRINT board is level
+     with the motherboard. The cable should be routed upward and gradually
+     fold back over the PC-SPRINT board towards the back of the computer.
+     
+        You're now done with the installation. Replace the cover, re-
+     attach all cables, place the switch box in a convenient location, plug
+     in the power cord, set the speed switch to normal, hold your breath
+     and power up.
+     
+        If everything worked ok, the computer should "boot" normally. At
+     DOS prompt, push the reset button - the machine should boot the same
+     as "power-up". Now run some of your programs (use backup copies - just
+     in case) to verify that everything else works. Flip the speed switch
+     to high and re-execute the same programs. They should run noticably
+     faster. Since PC-SPRINT speeds up only the processor, programs that do
+     a lot of I/O work (disk, screen, etc.) won't show much improvement.
+     Processor intensive operations, like spreadsheet recalcs, graphics,
+     in-memory database searches,etc., should be much more responsive.
+     
+     
+        What if the computer doesn't work now ?.
+       
+       First, recheck the installation looking for obvious problems
+     such as:
+                1) cables or power cord not reattached
+                2) improper PC-SPRINT board installation (misalligned, not
+                   fully in socket, wrong socket, etc)
+                3) processor misaligned or pins bent under the chip (very
+                   common)
+                4) switch cable damage
+                5) loose switch cable connections
+                6) reset switch wired to normally closed contacts instead
+                   of normally open
+       
+       If nothing is found at this stage, remove and recheck the PC-
+     SPRINT board for the following:
+                1) wrong parts or parts not in the correct holes
+                2) chips, tantalum capacitors or diodes installed backwards
+                3) crystal can shorting foil traces
+                4) bad solder joints
+                5) open or shorted foil traces
+                6) missing feedthrough wires (double sided) or jumpers
+                   (single sided)
+
+        Hopefully, you've now found something, fixed it, and are
+     happily running at high speed. If not, the problem may be more subtle,
+     but still not too difficult to find. You could have a bad processor or
+     other component, but most likely, something just can't handle the
+     speed increase. Except for the processor, the basic design of the PC
+     should be capable of operating at 7.37 mhz, but some adapter and ram
+     expansion boards may not - particularly if somebody cut corners and
+     used 200 ns rams instead of 150 ns types. The thing to do now is to
+     back off the speed a bit. Remove the 22.11 mhz crystal from the
+     PC-SPRINT board and replace it with a 20 mhz or even an 18.43 mhz
+     version - still a substantial speed up.
+
+      5. OPERATION
+
+        I have included two programs with this package. The first -
+     NOPRTYCK.COM - is a public domain program which stops all memory
+     parity checks (my regards to the unknown author). Some expansion
+     boards will work ok at high speed - except that their parity check
+     circuits are too slow. If you can't boot up at high speed without the
+     infamous "PARITY CHECK x" message, restart at normal speed and execute
+     this program (once between resets) BEFORE switching to high.
+     
+        The other, WARMBOOT.COM, is a simple program to set the flag which
+     causes the bios to skip memory tests on reset. If you include it in
+     your AUTOEXEC.BAT file, each time you restart with PC-SPRINT's reset
+     button, the computer will come up very quickly (the same as a
+     ctrl-alt-del).
+
+        Operation of PC-SPRINT's switches is obvious. The toggle switch
+     determines the speed (high or normal - which way depends on how you
+     wired it) and the reset push button causes a hardware restart without
+     powering down. In use, the speed switch can be changed anytime - even
+     while a program is running - without problem, but try to do it at DOS
+     prompt level. Keep the switch box out of the way so that you don't
+     inadvertantly hit the reset button. When you really want to restart,
+     tap the button firmly but quickly, otherwise the warmboot flag will be
+     lost.
+
+     6. THEORY
+     
+        The basic idea behind PC-SPRINT is simple - run the processor at a
+     higher clock rate and processing speed goes up proportionately. On the
+     IBM AT this can be done merely by replacing the processors' crystal -
+     for the PC & XT things aren't quite so easy for the following reasons:
+        1) The 8088 processor supplied is specified to run at only 5 mhz.
+        2) Operation of the timer circuits (interrupt, sound, etc.)
+           ultimately depends on the original frequency which must then
+           remain constant to maintain software compatibility.
+        3) A few common expansion boards (such as the color graphics
+           adapter) require the original clock to operate correctly.
+        4) Some programs use "software timing loops", and are therefore
+           processor speed dependent.
+          
+        PC-SPRINT attempts to solve these problems by running two crystals
+     simultaneously (the original and a higher frequency). This allows
+     changing only the processors clock, while keeping all other
+     frequencies constant. Obviously, the processor must be replaced with a
+     higher speed version.
+          
+        To gain easy access to the needed connections, PC-SPRINT replaces
+     the 8284A clock generator on the PC's motherboard, but reconnects some
+     of the 8284A's signals through itself, including the oscillator
+     signal, thus keeping that constant.
+          
+        By adding another 8284A and crystal, a new frequency source is
+     generated which can then be used to drive the unused external
+     frequency input of the original 8284A. The original 8284A will then
+     choose which source to operate from based on the logic level at its
+     F/-C input (high = external, low = crystal) and generate the
+     processors clock accordingly.
+          
+        The 8284A contains additional circuits to generate processor reset
+     and to select and synchronize the processors "ready" line (used to
+     cause the processor to wait for slow devices). By cross wiring the
+     oscillator outputs of each 8284A to the others external frequency
+     input and using the ready select circuits of the new 8284A, the
+     PERIPHERAL CLOCK output (which feeds the timer circuits on the
+     motherboard) is kept constant at its normal frequency as its source is
+     selected by the same logic signal used for switching the processors
+     clock.
+          
+        As mentioned previously, the 8284A also generates the processors
+     reset. By "diode or-ing" the motherboard reset line with the debounced
+     output of a momentary switch, a true (as opposed to the software
+     generated "ctrl-alt-del") reset is provided. This "diode or" violates
+     normal logic thresholds, but works in this case because the reset
+     input of the 8284A is a "Schmitt trigger" type with higher than normal
+     levels (when the hysteresis is added).
+          
+        The unused reset circuit of the added 8284A is combined with the
+     output of a toggle switch to generate the logic level which switches
+     the processors clock, giving manual control of speed. Both the reset
+     switch and the speed switch use a pull up resistor to supply logic
+     "high", and a capacitor to filter switch "bounce". These slow
+     transitions are "squared off" by the Schmitt trigger inputs.
+
+     7. COMMENTS
+
+        I hope you find PC-SPRINT of some value. I've tried to give as much
+     information as I can without making it my life's career. If interest
+     in this experiment is sufficient, I may add some enhancements to
+     PC-SPRINT in the future, as well as releasing other projects.
+     
+      GOOD LUCK !
+
+     8. LICENSE
+
+        License to duplicate, distribute and use PC-SPRINT is hereby
+     granted to individuals, for personal use, and non-profit organizations
+     with the following conditions:
+
+        1) All files in this package must be distributed intact and
+           unmodified.
+        2) No fees may be charged (other than reasonable duplication costs)
+           for this package or any printed circuit board made by its use.
+        3) All commercial rights to this package remain the property of the
+           author.
+        4) Hobby or user oriented magazines may reprint all or portions of
+           this package, as long as credit is given to the author.
+        5) For-profit organizations may obtain a license by contacting the
+           author.
+        6) The author will not be held liable for any damages or injuries,
+           direct or subsequent, that may result from its distribution,
+           construction, installation or use.
