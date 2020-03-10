@@ -27,7 +27,7 @@ Here is a rough index of the files included with the package as originally distr
 
 Note that some files have PDF conversions which were included with the version of the package as received by myself, so I have also linked those above.
 
-The author was keen to include the original unmodified package of files with future revisions, so it is available in [pcsprint_1985.zip](pcsprint_1985.zip).
+The author was keen to include the original unmodified package of files with future revisions, so it is available in [pcsprint_1985.zip](References/pcsprint_1985.zip).
 
 ## Updates For The 21st Century
 
@@ -35,7 +35,25 @@ The author was keen to include the original unmodified package of files with fut
 
 A Vintage Computer Federation forum user by the name of Retro Canada [redrew the original PCB design in KiCAD](http://www.vcfed.org/forum/showthread.php?60803-I-overclocked-my-IBM-5150) and [released the files freely](https://sites.google.com/site/tandycocoloco/dropbox/PC-SPRINT.zip) on November 26th 2017.
 
-I have added a mirror of this KiCAD package [here](Retro%20Canada/PC-SPRINT.zip). The package includes gerber files so KiCAD is not required if you are planning on sending the files directly to a PCB fabricator.
+I have added a mirror of this KiCAD project [here](Retro%20Canada/PC-SPRINT.zip). The package includes gerber files so KiCAD is not required if you are planning on sending the files directly to a PCB fabricator.
+
+It should be noted that Retro Canada had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). I believe that this is related to DMA activity and I have a proposed solution in development which I have documented below. I have also designed an improved "v2" version of the board incorporating these changes which is currently in the prototyping and testing phase.
+
+### PC-SPRINT v2 by ctrl-alt-rees
+
+In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [declared](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't appear to reduce the clock speed when the system was performing DMA activity, which would account for the stability issues some users had experienced. Presumably Retro Canada was not aware of this thread when building their own PC-SPRINT 3 years later. Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
+
+In 2019, another VCFed forum user, inmbolmie [decided to build one](http://www.vcfed.org/forum/showthread.php?70923-IBM-5160-overclock-Sergey%92s-way), as well as fixing some bugs in Sergey's design. The updated version was dubbed the [Turbo8088 v2](References/turbo8088%20v2.pdf). The board was successfully tested in a 5160 at up to 25MHz for a 8.33MHz CPU speed. Over this speed various problems were reported.
+
+My problem with the Turbo8088 is that it's a complex design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design, but I decided to see whether it would be possible to build a "PC-SPRINT v2" that incorporates the DMA signals Sergey identified.
+
+I believe that I have succeeded in this, and my new and improved PC-SPRINT is currently in the prototyping and testing phase.
+
+As all my predecessors have done, I am releasing the PC-SPRINT v2 under the GPL and making the files available here. The package includes the KiCAD and gerber files for PCB fabrication.
+
+Once the boards are manufactured and tested I will update this repo with further information.
+
+The PC-SPRINT v2 files are available [here](PC-SPRINT%20v2).
 
 ## License
 
