@@ -8,18 +8,18 @@ This design was released under a license analogous to the modern-day GPL, so I h
 
 Here is a rough index of the files included with the package as originally distributed:
 
-[1STREAD.ME](1STREAD.ME) - Listing of project files (you're reading a modern adaptation of this)
-[ARTWRK1X.BOT](ARTWRK1X.BOT) - Bottom layer printed circuit artwork 1x size (obsolete printer format) ([PDF](ARTWRK1X.BOT.PDF))
-[ARTWRK1X.TOP](ARTWRK1X.TOP) - Top layer printed circuit artwork 1x size (obsolete printer format) ([PDF](ARTWRK1X.TOP.PDF))
-[ARTWRK2X.BOT](ARTWRK2X.BOT) - Bottom layer printed circuit artwork 2x size (obsolete printer format) ([PDF](ARTWRK2X.BOT.PDF))
-[ARTWRK2X.TOP](ARTWRK2X.TOP) - Top layer printed circuit artwork 2x size (obsolete printer format) ([PDF](ARTWRK2X.TOP.PDF))
-[FEEDTHRU](FEEDTHRU) - Top - bottom "feed through" connection diagram ([PDF](FEEDTHRU.PDF))
-[NOPRTYCK.COM](NOPRTYCHK.COM) - Program to disable parity checks
-[PARTLIST](PARTLIST) - Parts list & placement drawing ([PDF](PARTLIST.PDF))
-[PCSPRINT.BAT](PCSPRINT.BAT) - Batch file to print PC-SPRINT info & drawings 
-**[PCSPRINT.DOC](PCSPRINT.DOC) - Description & construction info ([PCSPRINT.DOC](PCSPRINT.DOC.PDF))**
-[SCHEMATC](SCHEMATC) - Electronic circuit diagram ([PDF](SCHEMATC.PDF))
-[WARMBOOT.COM](WARMBOOT.COM) - Program to set "warm boot" flag
+- [1STREAD.ME](1STREAD.ME) - Listing of project files (you're reading a modern adaptation of this)
+- [ARTWRK1X.BOT](ARTWRK1X.BOT) - Bottom layer printed circuit artwork 1x size (obsolete printer format) ([PDF](ARTWRK1X.BOT.PDF))
+- [ARTWRK1X.TOP](ARTWRK1X.TOP) - Top layer printed circuit artwork 1x size (obsolete printer format) ([PDF](ARTWRK1X.TOP.PDF))
+- [ARTWRK2X.BOT](ARTWRK2X.BOT) - Bottom layer printed circuit artwork 2x size (obsolete printer format) ([PDF](ARTWRK2X.BOT.PDF))
+- [ARTWRK2X.TOP](ARTWRK2X.TOP) - Top layer printed circuit artwork 2x size (obsolete printer format) ([PDF](ARTWRK2X.TOP.PDF))
+- [FEEDTHRU](FEEDTHRU) - Top - bottom "feed through" connection diagram ([PDF](FEEDTHRU.PDF))
+- [NOPRTYCK.COM](NOPRTYCHK.COM) - Program to disable parity checks
+- [PARTLIST](PARTLIST) - Parts list & placement drawing ([PDF](PARTLIST.PDF))
+- [PCSPRINT.BAT](PCSPRINT.BAT) - Batch file to print PC-SPRINT info & drawings 
+- **[PCSPRINT.DOC](PCSPRINT.DOC) - Description & construction info ([PCSPRINT.DOC](PCSPRINT.DOC.PDF))**
+- [SCHEMATC](SCHEMATC) - Electronic circuit diagram ([PDF](SCHEMATC.PDF))
+- [WARMBOOT.COM](WARMBOOT.COM) - Program to set "warm boot" flag
 
 Note that some files have PDF conversions which were included with the version of the package as received by myself, so I have also linked those above.
 
