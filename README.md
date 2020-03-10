@@ -41,7 +41,7 @@ I have added a mirror of this KiCAD project [here](Retro%20Canada/PC-SPRINT.zip)
 
 ![Retro Canada's PC-SPRINT](Retro%20Canada/Images/pc-sprint1.jpg)
 
-The user built their own based on these files (pictured above) but it should be noted that they had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). I believe that this is related to DMA activity and I have a proposed solution in development which I have documented below. I have also designed an improved "v2" version of the board incorporating these changes which is currently in the prototyping and testing phase.
+The user built their own based on these files (pictured above) but it should be noted that they had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). It is believed that this is related to DMA activity and I have a proposed solution in development which I have documented below - an improved "v2" version of the board which is currently in the prototyping and testing phase.
 
 ### PC-SPRINT v2 by ctrl-alt-rees
 
@@ -49,19 +49,17 @@ The user built their own based on these files (pictured above) but it should be 
 
 First, a quick history lesson.
 
-In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [declared](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't appear to reduce the clock speed when the system was performing DMA activity, which would account for the stability issues some users had experienced. Presumably Retro Canada was not aware of this thread when building their own PC-SPRINT 3 years later. Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
+In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [observed](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't reduce the clock speed when the system was performing DMA activity, which would account for the stability issues. Presumably Retro Canada was not aware of this thread when building their own PC-SPRINT 3 years later. Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
 
-In 2019, another VCFed forum user, inmbolmie [decided to build one](http://www.vcfed.org/forum/showthread.php?70923-IBM-5160-overclock-Sergey%92s-way), as well as fixing some bugs in Sergey's design. The updated version was dubbed the [Turbo8088 v2](References/turbo8088%20v2.pdf). The board was successfully tested in a 5160 at up to 25MHz for a 8.33MHz CPU speed. Over this speed various problems were reported.
+In 2019, yet another VCFed forum user, inmbolmie, [decided to build one](http://www.vcfed.org/forum/showthread.php?70923-IBM-5160-overclock-Sergey%92s-way), as well as fixing some bugs in Sergey's design. The updated version was dubbed the [Turbo8088 v2](References/turbo8088%20v2.pdf). The board was successfully tested in a 5160 at up to 25MHz giving an 8.33MHz CPU clock speed. Over this speed various problems were reported.
 
 ![inmbolmie Sergey Turbo8088 PCB](References/inmbolmie/sergey_prototype_pcb_rotated.jpg)
 
-My problem with the Turbo8088 is that it's a complex design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design, but I decided to see whether it would be possible to build a "PC-SPRINT v2" that incorporates the DMA signals Sergey identified.
+My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design, but I decided to see whether it would be possible to build a "PC-SPRINT v2" that incorporates the DMA signals Sergey identified, making for a simple and compact package.
 
-I believe that I have succeeded in this, and my new and improved PC-SPRINT is currently in the prototyping and testing phase.
+I believe that I have succeeded in this, and my new and improved PC-SPRINT v2 is currently in the prototyping and testing phase.
 
-As all my predecessors have done, I am releasing the PC-SPRINT v2 under the GPL and making the files available here. The package includes the KiCAD and gerber files for PCB fabrication.
-
-Once the boards are manufactured and tested I will update this repo with further information.
+As all my predecessors have done, I am releasing the PC-SPRINT v2 under the GPL and making the files available here. The package includes the KiCAD and gerber files for PCB fabrication. Once the boards are manufactured and tested I will update this repo with further information.
 
 The PC-SPRINT v2 files are available [here](PC-SPRINT%20v2).
 
