@@ -29,6 +29,14 @@ Note that some files have PDF conversions which were included with the version o
 
 The author was keen to include the original unmodified package of files with future revisions, so it is available in [pcsprint_1985.zip](pcsprint_1985.zip).
 
+## Updates For The 21st Century
+
+### Retro Canada KiCAD Files
+
+A Vintage Computer Federation forum user by the name of Retro Canada [redrew the original PCB design in KiCAD](http://www.vcfed.org/forum/showthread.php?60803-I-overclocked-my-IBM-5150) and [released the files freely](https://sites.google.com/site/tandycocoloco/dropbox/PC-SPRINT.zip) on November 26th 2017.
+
+I have added a mirror of this KiCAD package [here](Retro%20Canada/PC-SPRINT.zip). The package includes gerber files so KiCAD is not required if you are planning on sending the files directly to a PCB fabricator.
+
 ## License
 
 The original  design was released under a license analogous to the modern-day GPL, so I have attached that license here. The PC-SPRINT is therefore assumed to comply with the [Open Hardware Specification](https://en.wikipedia.org/wiki/Open-source_hardware).
