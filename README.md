@@ -33,13 +33,21 @@ The author was keen to include the original unmodified package of files with fut
 
 ### Retro Canada KiCAD Files
 
+![3D Render of Retro Canada's PC-SPRINT](Retro%20Canada/Images/render.png)
+
 A Vintage Computer Federation forum user by the name of Retro Canada [redrew the original PCB design in KiCAD](http://www.vcfed.org/forum/showthread.php?60803-I-overclocked-my-IBM-5150) and [released the files freely](https://sites.google.com/site/tandycocoloco/dropbox/PC-SPRINT.zip) on November 26th 2017.
 
 I have added a mirror of this KiCAD project [here](Retro%20Canada/PC-SPRINT.zip). The package includes gerber files so KiCAD is not required if you are planning on sending the files directly to a PCB fabricator.
 
-It should be noted that Retro Canada had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). I believe that this is related to DMA activity and I have a proposed solution in development which I have documented below. I have also designed an improved "v2" version of the board incorporating these changes which is currently in the prototyping and testing phase.
+![Retro Canada's PC-SPRINT](Retro%20Canada/Images/pc-sprint1.jpg)
+
+The user built their own based on these files (pictured above) but it should be noted that they had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). I believe that this is related to DMA activity and I have a proposed solution in development which I have documented below. I have also designed an improved "v2" version of the board incorporating these changes which is currently in the prototyping and testing phase.
 
 ### PC-SPRINT v2 by ctrl-alt-rees
+
+![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
+
+First, a quick history lesson.
 
 In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [declared](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't appear to reduce the clock speed when the system was performing DMA activity, which would account for the stability issues some users had experienced. Presumably Retro Canada was not aware of this thread when building their own PC-SPRINT 3 years later. Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
 
