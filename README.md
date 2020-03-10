@@ -53,6 +53,8 @@ In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), a
 
 In 2019, another VCFed forum user, inmbolmie [decided to build one](http://www.vcfed.org/forum/showthread.php?70923-IBM-5160-overclock-Sergey%92s-way), as well as fixing some bugs in Sergey's design. The updated version was dubbed the [Turbo8088 v2](References/turbo8088%20v2.pdf). The board was successfully tested in a 5160 at up to 25MHz for a 8.33MHz CPU speed. Over this speed various problems were reported.
 
+![inmbolmie Sergey Turbo8088 PCB](References/inmbolmie/sergey_prototype_pcb_rotated.jpg)
+
 My problem with the Turbo8088 is that it's a complex design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design, but I decided to see whether it would be possible to build a "PC-SPRINT v2" that incorporates the DMA signals Sergey identified.
 
 I believe that I have succeeded in this, and my new and improved PC-SPRINT is currently in the prototyping and testing phase.
