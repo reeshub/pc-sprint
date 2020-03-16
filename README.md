@@ -1,5 +1,24 @@
 # PC-SPRINT
 
+## Navigating This Document
+
+This README has become somewhat unwieldy, so here's an index.
+
+- [Introduction to PC-SPRINT](#introduction-to-pc-sprint) - A basic introduction to the device.
+- [Original File Listing](#original-file-listing) - The original design and accompanying files as released by Doug Severson in 1985.
+- [Retro Canada KiCAD Files](#retro-canada-kicad-files) - KiCAD and gerber files drawn up by VCFed Forums user "Retro Canada" for PCB fabrication.
+- [My Own "Retro Canada" Board](#my-own-retro-canada-board) - I had a PCB fabricated and assembled it using the above files.
+  - [My Testing](#my-testing) - Notes from my own tests with this board.
+  - [My Benchmarks](#my-benchmarks) - Benchmarking results.
+    - [Landmark](#landmark) - Results from the Landmark benchmarking tool. 
+	- [TOPBENCH](#topbench) - Results from the TOPBENCH benchmarking tool.
+	- [CheckIt](#checkit) - Results from the CheckIt diagnostic / benchmarking tool.
+	- [Benchmarking Conclusions](#benchmarking-conclusions) - Conclusions on benchmark results.
+- [PC-SPRINT v2 by ctrl-alt-rees](#pc-sprint-v2-by-ctrl-alt-rees) - My improved design which should eliminate some potential issues.
+- [License](#license) - Licensing information for this project and documentation.
+
+## Introduction to PC-SPRINT
+
 The PC-SPRINT is a PC accelerator board design released by Doug Severson in 1985 and published in computer magazines of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5160 PCs, PCjr, Tandy 1000, and I'm sure a whole lot more.
 
 ![My PC-SPRINT Installed In My IBM 5150](Retro%20Canada/Images/Mine/pc-sprint-installed.jpg)
@@ -115,7 +134,7 @@ Note that TOPBENCH reports the run times of its tests in microseconds, so a lowe
 
 According to the database we've gone from an NCR PC4 to an Olivetti PC-1. As I'm not familiar with either of these machines I guess I'll just have to take their word for it. ;)
 
-#### CHECKIT
+#### CheckIt
 
 From [WinWorldPC](https://winworldpc.com/product/checkit/30), who said it better than I ever could:
 
@@ -159,9 +178,9 @@ Finally, of course benchmarks are entirely artificial and don't necessarily refl
 
 ## PC-SPRINT v2 by ctrl-alt-rees
 
-The above is all well and good, of course, but with the potential for DMA-related problems I decided that it would be easy enough to improve the design. In v2, the PC-SPRINT will seamlessly switch back to the stock clock speed whenever there is DMA activity, eliminating the possibility of lockups and other issues when this occurs.
+The above is all well and good, of course, but with the potential for DMA-related problems I decided that it would be worth attempting to improve the design. If nothing else, it will be a fun project and an opportunity to teach myself some things about KiCAD, PCB fabrication and early PCs.
 
-I hasten to point out that this hasn't proven to be an issue in my limited testing so far, but of course it's better to be safe than sorry.
+With all that in mind, the PC-SPRINT v2 will aim to seamlessly switch back to the stock clock speed whenever there is DMA activity, eliminating the possibility of lockups and other issues when this occurs. I hasten to point out that this hasn't proven to be an issue in my limited testing so far, but of course it's better to be safe than sorry and alleviate some concerns with the design.
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
 
@@ -173,13 +192,28 @@ In 2019, yet another VCFed forum user, inmbolmie, [decided to build one](http://
 
 ![inmbolmie Sergey Turbo8088 PCB](References/inmbolmie/sergey_prototype_pcb_rotated.jpg)
 
-My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design, but I decided to see whether it would be possible to build a "PC-SPRINT v2" that incorporates the DMA signals Sergey identified, making for a simple and compact package.
+My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity, owing to that fact that it's based on the way that the 5160 generates its clock signals, which is different to the 5150. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design but I decided to see whether it would be possible to incorporate the DMA signals Sergey identified, making for a simple and compact package.
 
 I believe that I have succeeded in this, and my new and improved PC-SPRINT v2 is currently in the prototyping and testing phase.
 
 As all my predecessors have done, I am releasing the PC-SPRINT v2 under the GPL and making the files available here. The package includes the KiCAD and gerber files for PCB fabrication. Once the boards are manufactured and tested I will update this repo with further information.
 
 The PC-SPRINT v2 files are available [here](PC-SPRINT%20v2).
+
+### DMA Signals on the 5150 Motherboard
+
+In my early research I came to the conclusion that these signals wouldn't be available on the 5150, but after a lot more reading and consulting the [IBM Technical Reference](References/IBM_5150_Technical_Reference_6322507_APR84.pdf), I believe that we can actually pick them up from very similar places to Sergey's design for the 5160. The Turbo8088 and indeed the PC-SPRINT v2 would then be able to incorporate the following:
+
+- HRQDMA: From pin 10 of the 8237 DMA controller IC. This pin goes HIGH on DMA activity.
+- HRQWAIT / DMAWAIT: From pin 7 of an 74LS175 "flip flop" IC labeled U88 on the XT, however I am yet to identify its location on the 5150. The most likely candidate is U26 (next to the DIP switches) but this needs to be confirmed before we hook anything up to it. As above, this pin also goes HIGH on DMA activity.
+
+These inputs are connected to an OR gate and an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH.
+
+![Old vs. New PC-SPRINT Turbo Switching Logic](PC-SPRINT%20v2/Images/pc-sprint-v2-new-dma-logic.jpg)
+
+Original circuit on the left, new design on the right.
+
+That said, I am very new to all this and open to suggestions. At the time of writing the prototype v2 boards haven't arrived so this is as yet untested.
 
 ## License
 
