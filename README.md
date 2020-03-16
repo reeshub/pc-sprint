@@ -15,6 +15,7 @@ This README has become somewhat unwieldy, so here's an index.
 	- [CheckIt](#checkit) - Results from the CheckIt diagnostic / benchmarking tool.
 	- [Benchmarking Conclusions](#benchmarking-conclusions) - Conclusions on benchmark results.
 - [PC-SPRINT v2 by ctrl-alt-rees](#pc-sprint-v2-by-ctrl-alt-rees) - My improved design which should eliminate some potential issues.
+  - [DMA Signals on the 5150 Motherboard](#dma-signals-on-the-5150-motherboard) - Notes on the locations to pick up DMA signals.
 - [License](#license) - Licensing information for this project and documentation.
 
 ## Introduction to PC-SPRINT
