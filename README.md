@@ -51,27 +51,47 @@ The user built their own based on these files (pictured above - [more of their p
 
 I have now successfully built and tested a PC-SPRINT using Retro Canada's files. I used [PCBWay](https://www.pcbway.com/) for my PCB fabrication. I used a 21.47727MHz crystal for a CPU clock speed of 7.16MHz, which coincidentally is the same as the Tandy 1000 EX/HX.
 
-#### Benchmarking and Testing
+#### My Testing
 
-Test System:
+Here are the specs of my IBM 5150 as tested:
 
 |Part|Model|Notes|
 |---|---|---|
-|CPU|NEC V20|4.77MHz stock / 7.16MHz "turbo" with PC-SPRINT|
-|FPU|Intel 8087-2||
-|RAM|640KB|(256KB onboard, 384KB on SixPakPlus card)*|
-|Motherboard|64-256KB Later Revision|10/27/82 BIOS|
+|CPU|[NEC V20](https://en.wikipedia.org/wiki/NEC_V20)|4.77MHz stock / 7.16MHz "turbo" with PC-SPRINT|
+|FPU|[Intel 8087-2](https://en.wikipedia.org/wiki/Intel_8087)|8087 co-processor rated up to 8MHz|
+|RAM|640KB|(256KB onboard, 384KB on SixPakPlus card)<sup>*</sup>|
+|Motherboard|64-256KB [Later Revision](http://www.minuszerodegrees.net/5150/motherboard/5150_motherboard_revisions.htm)|[10/27/82 BIOS](http://minuszerodegrees.net/5150/bios/5150_bios_revisions.htm)|
 |HDD|XT-IDE with 512MB CompactFlash card|Running [IDE_XTP.BIN BIOS](https://www.lo-tech.co.uk/wiki/XTIDE_Universal_BIOS)|
 |Graphics|IBM CGA||
 |Network|3com EtherLink II||
 |Floppy|2x Tandon 360KB 5.25"|Stock IBM Floppy ISA interface|
 |PSU|Standard 110VAC / 63.5W|
 
-* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.
+<sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
 
 I have done extensive testing with the above system and had no problems whatsoever. I was expecting issues with DMA activity as others have reported, however have seen none at all. Perhaps this is due to the XT-IDE and its [unusual handling of DMA](https://www.lo-tech.co.uk/xt-cfv3-dma-transfer-mode/). The PC even boots up fine with the turbo mode engaged. Incidentally, cold boot time is 1:02 stock vs. 43 seconds in turbo mode.
 
-The included NOPRTYCHK and WARMBOOT utilities work exactly as advertised with no isses as does the new reset button.
+The included NOPRTYCHK and WARMBOOT utilities work exactly as advertised with no issues as does the new reset button.
+
+Incidentally, this is how I installed the turbo and reset buttons in the case. Both are 12mm panel mount push buttons - the turbo button is a latching version:
+
+![My PC-SPRINT Reset and Turbo Buttons](Retro%20Canada/Images/Mine/pc-sprint-buttons.jpg)
+
+#### My Benchmarks
+
+I ran through a series of benchmarking applications in both turbo and non-turbo mode. I will sum these up in a table after the screenshots.
+
+#### Landmark
+
+![Landmark Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/landmark-before-after.jpg)
+
+|Benchmark|Stock|Turbo|Increase|
+|---|---|---|---|
+|CPU<sup>*</sup>|3.02MHz|4.60MHz|52.32%|
+|FPU|4.56MHz|6.92MHZ|51.75%|
+|Video|412.35 chr/ms|446.03 chr/ms|8.17%|
+
+<sup>\* I'm not sure why this figure is different to the "CPU Clock" shown at the top left.
 
 ### PC-SPRINT v2 by ctrl-alt-rees
 
