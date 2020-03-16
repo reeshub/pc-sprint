@@ -81,6 +81,8 @@ I ran through a series of benchmarking applications in both turbo and non-turbo 
 
 #### Landmark
 
+Landmark System Speed Test was released in 1984 by Landmark Research Internation Corporation and was one of the first DOS benchmarking tools. Here I'm using version 6.00, the final release from 1993.
+
 ![Landmark Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/landmark-before-after.jpg)
 
 |Benchmark|Stock|Turbo|Increase|
@@ -89,7 +91,27 @@ I ran through a series of benchmarking applications in both turbo and non-turbo 
 |FPU|4.56MHz|6.92MHZ|51.75%|
 |Video|412.35 chr/ms|446.03 chr/ms|8.17%|
 
-<sup>\* I'm not sure why this figure is different to the "CPU Clock" shown at the top left.
+<sup>\* The way this figure is calculated is interesting (and generally considered wrong) but the percentage increase is all that matters to us. There is more information on the way Landmark arrives at their CPU figure [here](https://dosbenchmark.wordpress.com/research/landmark/).
+
+#### TOPBENCH
+
+[TOPBENCH](https://dosbenchmark.wordpress.com/) is a modern realtime DOS benchmarking tool. An interesting feature is its "database", which allows you to compare your system's performance to that submitted by other users. I'm using version 0.38 with the full database.
+
+![TOPBENCH Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/topbench-before-after.jpg)
+
+Note that TOPBENCH reports the run times of its tests in microseconds, so a lower score is better (faster).
+
+|Benchmark|Stock|Turbo|Increase|
+|---|---|---|---|
+|TOPBENCH Score|5|7|2|
+|MemTest|2488|1640|51.71%|
+|MemEA|1863|1211|53.84%|
+|Opcodes|1519|991|53.28%|
+|VidMem|2009|1840|9.18%|
+|3DGames|1408|919|53.21%|
+|Total|9287|6601|40.69%|
+
+According to the database, we've gone from an NCR PC4 to an Olivetti PC-1. As I'm not familiar with either of these machines I guess I'll just have to take their word for it. ;)
 
 ## PC-SPRINT v2 by ctrl-alt-rees
 
