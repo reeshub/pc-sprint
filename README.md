@@ -79,6 +79,8 @@ Incidentally, this is how I installed the turbo and reset buttons in the case. B
 
 I ran through a series of benchmarking applications in both turbo and non-turbo mode.
 
+These screenshots (and the videos on [my YouTube channel](https://www.youtube.com/ctrlaltrees)) were captured with a rather elaborate capture setup involving a [CGA2RGB](https://gglabs.us/node/2063), [OSSC](https://videogameperfection.com/products/open-source-scan-converter/) and a [StarTech USB3HDCAP](https://www.startech.com/uk/AV/Converters/Video/usb-3-0-video-capture-device-hdmi-dvi-vga~USB3HDCAP), but that's a tale for another time.
+
 #### Landmark
 
 Landmark System Speed Test was released in 1984 by Landmark Research Internation Corporation and was one of the first DOS benchmarking tools. Here I'm using version 6.00, the final release from 1993.
