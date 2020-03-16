@@ -106,14 +106,50 @@ Note that TOPBENCH reports the run times of its tests in microseconds, so a lowe
 |Benchmark|Stock|Turbo|Increase|
 |---|---|---|---|
 |TOPBENCH Score|5|7|2|
-|MemTest|2488|1640|51.71%|
-|MemEA|1863|1211|53.84%|
-|Opcodes|1519|991|53.28%|
-|VidMem|2009|1840|9.18%|
-|3DGames|1408|919|53.21%|
-|Total|9287|6601|40.69%|
+|MemTest|2488μ|1640μ|51.71%|
+|MemEA|1863μ|1211μ|53.84%|
+|Opcodes|1519μ|991μ|53.28%|
+|VidMem|2009μ|1840μ|9.18%|
+|3DGames|1408μ|919μ|53.21%|
+|Total|9287μ|6601μ|40.69%|
 
-According to the database, we've gone from an NCR PC4 to an Olivetti PC-1. As I'm not familiar with either of these machines I guess I'll just have to take their word for it. ;)
+According to the database we've gone from an NCR PC4 to an Olivetti PC-1. As I'm not familiar with either of these machines I guess I'll just have to take their word for it. ;)
+
+#### CHECKIT
+
+From [WinWorldPC](https://winworldpc.com/product/checkit/30), who said it better than I ever could:
+
+CheckIt, from TouchStone Software Corporation, is a diagnostic tool for generic PC/XT/AT compatible computers. It can perform tests on RAM, hard disks, video cards, floppy disks, motherboard resources, and I/O devices. It has an easy to use menu interface but can also run tests non-interactively.
+
+I'm running version 3. In each of these screenshots, the "Stock" value (top grey line) is the value measured with turbo mode off.
+
+![CheckIt CPU Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-main-system-before-after.jpg)
+
+|Benchmark|Stock|Turbo|Increase|
+|---|---|---|---|
+|CPU [Dhrystones](https://en.wikipedia.org/wiki/Dhrystone)|387|597|54.26%|
+|FPU [Whetstones](https://en.wikipedia.org/wiki/Whetstone_(benchmark))|123.1K|186K|51.1%|
+
+![CheckIt Hard Disk Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-hard-disk-before-after.jpg)
+
+|Benchmark|Stock|Turbo|Increase|
+|---|---|---|---|
+|Transfer Speed|198.9K/sec|303.2K/sec|52.44%|
+|Average Seek Time<sup>*</sup>|1.7ms|1.1ms|54.55%|
+|Track Seek Time<sup>*</sup>|1.7ms|1.1ms|54.55%|
+
+<sup>\* Note that when it comes to seek times, lower numbers are better.</sup>
+
+![CheckIt Video System Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-video-system-before-after.jpg)
+
+|Benchmark|Stock|Turbo|Increase|
+|---|---|---|---|
+|BIOS Video Speed|637chr/sec|968chr/sec|51.96%|
+|Direct Video Speed|4837chr/sec|7395chr/sec|52.88%|
+
+![CheckIt RAM Test Results - Turbo Mode](Retro%20Canada/Images/Mine/Benchmarks/checkit-ram-test-turbo-mode.jpg)
+
+I also ran various RAM tests with turbo enabled to see if it would pick up any errors, but all tests passed with no problems.
 
 ## PC-SPRINT v2 by ctrl-alt-rees
 
