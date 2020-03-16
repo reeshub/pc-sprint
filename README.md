@@ -159,6 +159,10 @@ Finally, of course benchmarks are entirely artificial and don't necessarily refl
 
 ## PC-SPRINT v2 by ctrl-alt-rees
 
+The above is all well and good, of course, but with the potential for DMA-related problems I decided that it would be easy enough to improve the design. In v2, the PC-SPRINT will seamlessly switch back to the stock clock speed whenever there is DMA activity, eliminating the possibility of lockups and other issues when this occurs.
+
+I hasten to point out that this hasn't proven to be an issue in my limited testing so far, but of course it's better to be safe than sorry.
+
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
 
 First, a quick history lesson.
