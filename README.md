@@ -208,7 +208,7 @@ In my early research I came to the conclusion that these signals wouldn't be ava
 - HRQDMA: From pin 10 of the 8237 DMA controller IC. This pin goes HIGH on DMA activity.
 - HRQWAIT / DMAWAIT: From pin 7 of an 74LS175 "flip flop" IC labeled U88 on the XT, however I am yet to identify its location on the 5150. The most likely candidate is U26 (next to the DIP switches) but this needs to be confirmed before we hook anything up to it. As above, this pin also goes HIGH on DMA activity.
 
-These inputs are connected to an OR gate and an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH.
+These inputs are connected to an OR gate and an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH. In the spirit of the original design I have implemented this logic using discrete components, but it could be easily adapted to use [7400 series TTL](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits) instead if you're so inclined.
 
 ![Old vs. New PC-SPRINT Turbo Switching Logic](PC-SPRINT%20v2/Images/pc-sprint-v2-new-dma-logic.jpg)
 
