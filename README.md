@@ -151,6 +151,12 @@ I'm running version 3. In each of these screenshots, the "Stock" value (top grey
 
 I also ran various RAM tests with turbo enabled to see if it would pick up any errors, but all tests passed with no problems.
 
+### Benchmarking Conclusions
+
+As we can see, the speedup on all fronts is in the region of 50-55%, which is a massive improvement for around £6 worth of components. I haven't encountered any stability issues but my testing is ongoing and of course, if I come across them I will document them here.
+
+Finally, of course benchmarks are entirely artificial and don't necessarily reflect real world results. In my testing I have found that various games are much more playable and with the introduction of very few side effects in most cases. That's a hard thing to quantify, however, so with that in mind I am working on a series of comparison videos which should hopefully be available [on my YouTube channel](https://www.youtube.com/ctrlaltrees) soon.
+
 ## PC-SPRINT v2 by ctrl-alt-rees
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
