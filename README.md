@@ -31,9 +31,7 @@ Note that some files have PDF conversions which were included with the version o
 
 The author was keen to include the original unmodified package of files with future revisions, so it is available in [pcsprint_1985.zip](References/pcsprint_1985.zip).
 
-## Updates For The 21st Century
-
-### Retro Canada KiCAD Files
+## Retro Canada KiCAD Files
 
 ![3D Render of Retro Canada's PC-SPRINT](Retro%20Canada/Images/render.png)
 
@@ -45,7 +43,7 @@ I have added a mirror of this KiCAD project [here](Retro%20Canada/PC-SPRINT.zip)
 
 The user built their own based on these files (pictured above - [more of their pictures here](Retro%20Canada/Images)) but it should be noted that they had issues with the PC-SPRINT and could only get it to run reliably with a 17.43MHz crystal (CPU clock speed 5.81MHz). It is believed that this is related to DMA activity and I have a proposed solution in development which I have [documented below](#pc-sprint-v2-by-ctrl-alt-rees) - an improved "v2" version of the board which is currently in the prototyping and testing phase.
 
-#### My Own "Retro Canada" Board
+### My Own "Retro Canada" Board
 
 ![My PC-SPRINT Built Using Retro Canada's Gerber Files](Retro%20Canada/Images/Mine/pc-sprint-pcb.jpg)
 
@@ -77,9 +75,9 @@ Incidentally, this is how I installed the turbo and reset buttons in the case. B
 
 ![My PC-SPRINT Reset and Turbo Buttons](Retro%20Canada/Images/Mine/pc-sprint-buttons.jpg)
 
-#### My Benchmarks
+### My Benchmarks
 
-I ran through a series of benchmarking applications in both turbo and non-turbo mode. I will sum these up in a table after the screenshots.
+I ran through a series of benchmarking applications in both turbo and non-turbo mode.
 
 #### Landmark
 
@@ -93,7 +91,7 @@ I ran through a series of benchmarking applications in both turbo and non-turbo 
 
 <sup>\* I'm not sure why this figure is different to the "CPU Clock" shown at the top left.
 
-### PC-SPRINT v2 by ctrl-alt-rees
+## PC-SPRINT v2 by ctrl-alt-rees
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
 
