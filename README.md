@@ -208,15 +208,15 @@ The above is all well and good, of course, but with the potential for DMA-relate
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/render.png)
 
-First, a quick history lesson.
+To understand why and how, we'll start with a quick history lesson.
 
-In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [observed](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't reduce the clock speed when the system was performing DMA activity, which would account for the stability issues. Presumably Retro Canada was not aware of this thread when building their own PC-SPRINT 3 years later. Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
+In 2014 fellow VCFed forum user [Sergey Kiselev](https://github.com/skiselev), author of various high profile 8088 and Z80 hardware projects, analysed the PC-SPRINT and [observed](http://www.vcfed.org/forum/showthread.php?41940-IBM-XT-cpu-upgrade&p=319044#post319044) that it didn't reduce the clock speed when the system was performing DMA activity. [DMA or "Direct Memory Access"](https://en.wikipedia.org/wiki/Direct_memory_access) is a way for devices to read and write directly to RAM, bypassing the CPU. If the device in question isn't designed to take account of the CPU running at a different clock speed to the rest of the system this can result in potential problems. Based on this, Sergey went on to design and release his own solution, the [Turbo 8088](References/Turbo%208088%20-%20Schematic.pdf), based on his [Xi 8088](http://www.malinov.com/Home/sergeys-projects/xi-8088) ISA processor board.
 
 In 2019, yet another VCFed forum user, inmbolmie, [decided to build one](http://www.vcfed.org/forum/showthread.php?70923-IBM-5160-overclock-Sergey%92s-way), as well as fixing some bugs in Sergey's design. The updated version was dubbed the [Turbo8088 v2](References/turbo8088%20v2.pdf). The board was successfully tested in a 5160 at up to 25MHz giving an 8.33MHz CPU clock speed. Over this speed various problems were reported.
 
 ![inmbolmie Sergey Turbo8088 PCB](References/inmbolmie/sergey_prototype_pcb_rotated.jpg)
 
-My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity, owing to that fact that it's based on the way that the 5160 generates its clock signals, which is different to the 5150. I don't want to tread on Sergey's toes as he is very talented when it comes to electronics and system design but I decided to see whether it would be possible to incorporate the DMA signals Sergey identified, making for a simple and compact package.
+My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity, owing to that fact that it's based on the way that the 5160 generates its clock signals, which is different to the 5150. I don't want to tread on Sergey's toes as he's one of the best when it comes to systems architecture and electronics but I decided to see whether it would be possible to incorporate the DMA signals Sergey identified into the PC-SPRINT, making for a simple and compact hybrid solution.
 
 I believe that I have succeeded in this, and my new and improved PC-SPRINT v2 is currently in the prototyping and testing phase.
 
