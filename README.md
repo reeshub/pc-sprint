@@ -13,6 +13,7 @@ This README has become somewhat unwieldy, so here's an index.
     - [Landmark](#landmark) - Results from the Landmark benchmarking tool. 
 	- [TOPBENCH](#topbench) - Results from the TOPBENCH benchmarking tool.
 	- [CheckIt](#checkit) - Results from the CheckIt diagnostic / benchmarking tool.
+	- [MIPS](#mips) - You guessed it. Results from the MIPS benchmarking tool.
 	- [Benchmarking Conclusions](#benchmarking-conclusions) - Conclusions on benchmark results.
 - [PC-SPRINT v2 by ctrl-alt-rees](#pc-sprint-v2-by-ctrl-alt-rees) - My improved design which should eliminate some potential issues.
   - [DMA Signals on the 5150 Motherboard](#dma-signals-on-the-5150-motherboard) - Notes on the locations to pick up DMA signals.
@@ -101,13 +102,15 @@ I ran through a series of benchmarking applications in both turbo and non-turbo 
 
 These screenshots (and the videos on [my YouTube channel](https://www.youtube.com/ctrlaltrees)) were captured with a rather elaborate capture setup involving a [CGA2RGB](https://gglabs.us/node/2063), [OSSC](https://videogameperfection.com/products/open-source-scan-converter/) and a [StarTech USB3HDCAP](https://www.startech.com/uk/AV/Converters/Video/usb-3-0-video-capture-device-hdmi-dvi-vga~USB3HDCAP), but that's a tale for another time.
 
+These benchmarks compare the performance of the NEC V20 CPU in stock 4.77MHz and turbo 7.16MHz modes using the PC-SPRINT. Unfortunately I don't have the original Intel 8088 CPU anymore to be able to test, however for some indication of how this system performs compared to a stock 5150 take a look at the [MIPS](#mips) benchmark below.
+
 #### Landmark
 
 Landmark System Speed Test was released in 1984 by Landmark Research Internation Corporation and was one of the first DOS benchmarking tools. Here I'm using version 6.00, the final release from 1993.
 
 ![Landmark Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/landmark-before-after.jpg)
 
-|Benchmark|Stock|Turbo|Increase|
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
 |CPU<sup>*</sup>|3.02MHz|4.60MHz|52.32%|
 |FPU|4.56MHz|6.92MHZ|51.75%|
@@ -123,7 +126,7 @@ Landmark System Speed Test was released in 1984 by Landmark Research Internation
 
 Note that TOPBENCH reports the run times of its tests in microseconds, so a lower score is better (faster).
 
-|Benchmark|Stock|Turbo|Increase|
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
 |TOPBENCH Score|5|7|2|
 |MemTest|2488μ|1640μ|51.71%|
@@ -145,14 +148,14 @@ I'm running version 3. In each of these screenshots, the "Stock" value (top grey
 
 ![CheckIt CPU Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-main-system-before-after.jpg)
 
-|Benchmark|Stock|Turbo|Increase|
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
 |CPU [Dhrystones](https://en.wikipedia.org/wiki/Dhrystone)|387|597|54.26%|
 |FPU [Whetstones](https://en.wikipedia.org/wiki/Whetstone_(benchmark))|123.1K|186K|51.1%|
 
 ![CheckIt Hard Disk Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-hard-disk-before-after.jpg)
 
-|Benchmark|Stock|Turbo|Increase|
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
 |Transfer Speed|198.9K/sec|303.2K/sec|52.44%|
 |Average Seek Time<sup>*</sup>|1.7ms|1.1ms|54.55%|
@@ -162,7 +165,7 @@ I'm running version 3. In each of these screenshots, the "Stock" value (top grey
 
 ![CheckIt Video System Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-video-system-before-after.jpg)
 
-|Benchmark|Stock|Turbo|Increase|
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
 |BIOS Video Speed|637chr/sec|968chr/sec|51.96%|
 |Direct Video Speed|4837chr/sec|7395chr/sec|52.88%|
@@ -170,6 +173,23 @@ I'm running version 3. In each of these screenshots, the "Stock" value (top grey
 ![CheckIt RAM Test Results - Turbo Mode](Retro%20Canada/Images/Mine/Benchmarks/checkit-ram-test-turbo-mode.jpg)
 
 I also ran various RAM tests with turbo enabled to see if it would pick up any errors, but all tests passed with no problems.
+
+#### MIPS
+
+Chips & Technologies MIPS was written by Jim Bracking and released in 1986. It's a very comprehensive test covering various number-crunching operations, and even shows your score compared to typical examples of machines of that era - an IBM PC, PC/XT and a Compaq 386.
+
+![MIPS Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/mips-before-after.jpg)
+
+|Benchmark|V20 Stock|V20 Turbo|Improvement|
+|---|---|---|---|
+|General Instructions|0.19|.029|52.63%|
+|Integer Instructions|0.32|0.49|53.12%|
+|Memory To Memory|0.26|0.41|57.69%|
+|Register To Register|0.39|0.60|53.85%|
+|Register To Memory|0.33|0.51|54.55%|
+|Overall Performance|0.30|0.46|53.33%|
+
+As you can see from the screenshot, our overclocked NEC V20 is over twice as fast as a stock IBM 5150 running an Intel 8088 CPU.
 
 ### Benchmarking Conclusions
 
@@ -212,7 +232,7 @@ These inputs are connected to an OR gate and an inverter. When combined with an 
 
 ![Old vs. New PC-SPRINT Turbo Switching Logic](PC-SPRINT%20v2/Images/pc-sprint-v2-new-dma-logic.jpg)
 
-Original circuit on the left, new design on the right.
+Original circuit on the left, new additions on the right.
 
 That said, I am very new to all this and open to suggestions. At the time of writing the prototype v2 boards haven't arrived so this is as yet untested.
 
