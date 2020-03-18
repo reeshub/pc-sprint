@@ -216,11 +216,11 @@ In 2019, yet another VCFed forum user, inmbolmie, [decided to build one](http://
 
 ![inmbolmie Sergey Turbo8088 PCB](References/inmbolmie/sergey_prototype_pcb_rotated.jpg)
 
-My problem with the Turbo8088 is that it's a large design that adds a lot of components and complexity, owing to that fact that it's based on the way that the 5160 generates its clock signals, which is different to the 5150. I don't want to tread on Sergey's toes as he's one of the best when it comes to systems architecture and electronics but I decided to see whether it would be possible to incorporate the DMA signals Sergey identified into the PC-SPRINT, making for a simple and compact hybrid solution.
+As you can see, the Turbo8088 is a large design that adds a lot of components and complexity. I don't want to tread on Sergey's toes as he's one of the best when it comes to systems architecture and electronics but I decided to see whether it would be possible to incorporate the DMA signals Sergey identified into the PC-SPRINT, making for a simple and compact hybrid solution.
 
-I believe that I have succeeded in this, and my new and improved PC-SPRINT v2 is currently in the prototyping and testing phase.
+I believe that I have succeeded in this, and my PC-SPRINT v2 prototypes are currently being tested.
 
-As all my predecessors have done, I am releasing the PC-SPRINT v2 under the GPL and making the files available here. The package includes the KiCAD and gerber files for PCB fabrication. Once the boards are manufactured and tested I will update this repo with further information.
+As this started life as a freely available project it only seemed right to release the PC-SPRINT v2 under the GPL. The package includes the KiCAD and gerber files for PCB fabrication. Once the boards are manufactured and tested I will update this repo with further information.
 
 The PC-SPRINT v2 files are available [here](PC-SPRINT%20v2).
 
