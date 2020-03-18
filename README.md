@@ -87,6 +87,7 @@ Here are the specs of my IBM 5150 as tested:
 |Network|3com EtherLink II||
 |Floppy|2x Tandon 360KB 5.25"|Stock IBM Floppy ISA interface|
 |PSU|Standard 110VAC / 63.5W|
+|Operating System|[IBM PC DOS 2000](https://winworldpc.com/product/pc-dos/2000)||
 
 <sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
 
@@ -180,7 +181,7 @@ I also ran various RAM tests with turbo enabled to see if it would pick up any e
 
 #### MIPS
 
-Chips & Technologies MIPS was written by Jim Bracking and released in 1986. It's a very comprehensive test covering various number-crunching operations, and even shows your score compared to typical examples of machines of that era - an IBM PC, PC/XT and a Compaq 386.
+Chips & Technologies MIPS was written by Jim Bracking and released in 1986. It's a very comprehensive test covering various number-crunching operations, and even shows your score compared to typical examples of machines of that era - an IBM PC, PC/AT and a Compaq 386.
 
 ![MIPS Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/mips-before-after.jpg)
 
@@ -193,7 +194,7 @@ Chips & Technologies MIPS was written by Jim Bracking and released in 1986. It's
 |Register To Memory|0.33|0.51|54.55%|
 |Overall Performance|0.30|0.46|53.33%|
 
-As you can see from the screenshot, our overclocked NEC V20 is over twice as fast as a stock IBM 5150 running an Intel 8088 CPU.
+MIPS also shows that our overclocked NEC V20 is over twice as fast as a stock IBM 5150 running an Intel 8088 CPU.
 
 ### Benchmarking Conclusions
 
