@@ -85,7 +85,7 @@ Here are the specs of my IBM 5150 as tested:
 
 <sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
 
-The PCBs have arrived from [PCBWay](https://www.pcbway.com/) and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the boards is assembled with 90 degree pin headers on J1 and J2 (as pictured below) as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
+The PCBs have arrived from [PCBWay](https://www.pcbway.com/) and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the board is assembled with 90 degree pin headers on J1 and J2 (as pictured below) as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
 
 ![Assembled Prototype PC-SPRINT v2](Images/pc-sprint-v2-assembled.jpg)
 
