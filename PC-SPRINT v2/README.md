@@ -1,4 +1,6 @@
-## PC-SPRINT v2
+# PC-SPRINT v2
+
+![PC-SPRINT v2 Prototype Installed](Images/pc-sprint-installed.jpg)
 
 Building on the work of Doug Severson in 1985, the PC-SPRINT v2 is an updated and improved DIY overclocking device for 8088-based systems. Please see the [PC-SPRINT README](/blob/master/README.md) for an introduction to the original device.
 
@@ -22,7 +24,7 @@ As this started life as a freely available project it only seemed right to relea
 
 The PC-SPRINT v2 files are available [here](KiCAD).
 
-### DMA Signals on the 5150 Motherboard
+## DMA Signals on the 5150 Motherboard
 
 In my early research I came to the conclusion that these signals wouldn't be available on the 5150, but after a lot more reading and consulting the [IBM Technical Reference](References/IBM_5150_Technical_Reference_6322507_APR84.pdf), I believe that we can actually pick them up from very similar places to Sergey's design for the 5160. The Turbo8088 and indeed the PC-SPRINT v2 would then be able to incorporate the following:
 
@@ -34,3 +36,9 @@ These inputs are connected to an OR gate and an inverter. When combined with an 
 ![Old vs. New PC-SPRINT Turbo Switching Logic](PC-SPRINT%20v2/Images/pc-sprint-v2-new-dma-logic.jpg)
 
 Original circuit on the left, new additions on the right.
+
+## Current Status
+
+The PCBs have arrived from PCBWay and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the boards is assemlbed with right angled pin headers as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
+
+![Assembled Prototype PC-SPRINT v2](Images/pc-sprint-v2-assembled.jpg)
