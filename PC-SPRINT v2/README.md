@@ -2,9 +2,9 @@
 
 ![PC-SPRINT v2 Prototype Installed](Images/pc-sprint-v2-installed.jpg)
 
-Building on the work of Doug Severson in 1985, the PC-SPRINT v2 is an updated and improved DIY overclocking device for 8088-based systems. Please see the [PC-SPRINT README](/blob/master/README.md) for an introduction to the original device.
+Building on the work of Doug Severson from 1985, the PC-SPRINT v2 is an updated and improved DIY Open Hardware overclocking device for 8088-based systems. Please see the [PC-SPRINT README](/README.md) for an introduction to the original device.
 
-With the potential for DMA-related problems I decided that it would be worth attempting to improve the design of the PC-SPRINT. Although I haven't run into these problems myself and I'm not sure how I'll test it, it will be a fun project and an opportunity to teach myself some things about KiCAD, PCB fabrication and early PCs. With all that in mind, the PC-SPRINT v2 will aim to seamlessly switch back to the stock clock speed whenever there is DMA activity, eliminating the possibility of lockups.
+With the potential for DMA-related problems I decided that it would be worth attempting to improve the design of the PC-SPRINT. Although I haven't run into these problems myself it will be a fun project and an opportunity to teach myself some things about KiCAD, PCB fabrication and early PCs. With all that in mind, the PC-SPRINT v2 will aim to seamlessly switch back to the stock clock speed whenever there is DMA activity, hopefully eliminating the possibility of lockups.
 
 ![3D Render of PC-SPRINT v2](Images/render.png)
 
@@ -20,7 +20,7 @@ As you can see, the Turbo8088 is a large design that adds a lot of components an
 
 I believe that I have succeeded in this, and my PC-SPRINT v2 prototypes are currently being tested.
 
-As this started life as a freely available project it only seemed right to release the PC-SPRINT v2 under the GPL. The package includes the KiCAD and gerber files for PCB fabrication. Once the boards are manufactured and tested I will update this repo with further information.
+As this started life as a freely available project it only seemed right to release the PC-SPRINT v2 under the GPL. The package includes the KiCAD and gerber files for PCB fabrication. This is an ongoing project and this repo will be regularly updated as new information comes to light from ongoing research and testing.
 
 The PC-SPRINT v2 files are available [here](KiCAD).
 
@@ -43,9 +43,9 @@ The bill of materials is mostly the same as the original PC-SPRINT. Additional r
 |J1|Pin Header|90 Degree 4 Pin|
 |J2|Pin Header|90 Degree 2 Pin|
 
-<sup>\* 22.11MHz was the original recommended value and has been tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
-
 <sup>\** One of these will be populated with a new 8284A IC. The other will house your existing 8284A as removed from the motherboard.</sup>
+
+<sup>\* 22.11MHz was the original recommended value and has been tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
 
 ### Additional / External Parts To Consider:
 
@@ -85,13 +85,13 @@ Here are the specs of my IBM 5150 as tested:
 
 <sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
 
-The PCBs have arrived from [PCBWay](https://www.pcbway.com/) and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the boards is assemlbed with right angled pin headers as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
+The PCBs have arrived from [PCBWay](https://www.pcbway.com/) and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the boards is assembled with 90 degree pin headers on J1 and J2 (as pictured below) as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
 
 ![Assembled Prototype PC-SPRINT v2](Images/pc-sprint-v2-assembled.jpg)
 
 **The PC-SPRINT v2 is working as intended but without the J2 DMA pins connected. This means that it is permanently in turbo mode and may cause problems with DMA transfers.**
 
-The next step will be to get these connected up and tested, however this will entail an intense oscilloscope session and may involve removal of the motherboard so I am waiting until I have time to schedule this is properly.
+The next step will be to get these connected up and tested, however this will entail an intense oscilloscope session and may involve removal of the motherboard so I am waiting until I have time to schedule this in properly.
 
 For now, based on my experience, the PC-SPRINT (v1 or v2) is perfectly safe to use with a 22.11MHz crystal.
 
@@ -101,8 +101,12 @@ These are the values I have tested in my system so far. Your results may differ.
 
 |Crystal Value|CPU Clock Speed|Result|Notes|
 |---|---|---|---|
-|21.47727MHz|7.16MHz|Working|Same clock speed as [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX).|
+|21.4772MHz|7.16MHz|Working|Same clock speed as [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX).|
 |22.1184MHz|7.37MHz|Working|Testing ongoing but all good so far. This is the original PC-SPRINT recommended value.|
-|24MHz|8MHz|System will not boot / locks up instantly when enabled|Same clock speed as later [IBM PC/AT](https://en.wikipedia.org/wiki/IBM_Personal_Computer/AT).|
+|24MHz|8MHz|System will not boot / locks up when enabled|Same clock speed as later [IBM PC/AT](https://en.wikipedia.org/wiki/IBM_Personal_Computer/AT).|
 
 For more information on timing please see the [original PC-SPRINT documentation](/blob/master/README.md) for now.
+
+## License
+
+The original  design was released under a license similar to the modern-day GPL (IANAL), so I have attached that license here. The PC-SPRINT v2 is therefore assumed to comply with the [Open Hardware Specification](https://en.wikipedia.org/wiki/Open-source_hardware).

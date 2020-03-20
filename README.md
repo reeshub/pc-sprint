@@ -207,8 +207,19 @@ The above is all well and good, of course, but with the potential for DMA-relate
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/Images/render.png)
 
-**PC-SPRINT v2 now has its own README with regular development updates [here](PC-SPRINT%20v2/README.md).**
+**PC-SPRINT v2 now has its own README with regular development updates [here](PC-SPRINT%20v2).**
 
 ## License
 
-The original  design was released under a license analogous to the modern-day GPL, so I have attached that license here. The PC-SPRINT is therefore assumed to comply with the [Open Hardware Specification](https://en.wikipedia.org/wiki/Open-source_hardware).
+The PC-SPRINT was originally released with the following licensing conditions:
+
+> License to duplicate, distribute and use PC-SPRINT is hereby granted to individuals, for personal use, and non-profit organizations with the following conditions:
+> 
+> 1. All files in this package must be distributed intact and unmodified.
+> 2. No fees may be charged (other than reasonable duplication costs) for this package or any printed circuit board made by its use.
+> 3. All commercial rights to this package remain the property of the author.
+> 4. Hobby or user oriented magazines may reprint all or portions of this package, as long as credit is given to the author.
+> 5. For-profit organizations may obtain a license by contacting the author.
+> 6. The author will not be held liable for any damages or injuries, direct or subsequent, that may result from its distribution, construction, installation or use.
+
+Attempts have been made to track down the author but to no avail, so this project and the derivative [PC-SPRINT v2](PC-SPRINT%20v2) are shared here in good faith that the sentiments of the original designer will be honoured.
