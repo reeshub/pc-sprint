@@ -207,7 +207,7 @@ The above is all well and good, of course, but with the potential for DMA-relate
 
 ![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/Images/render.png)
 
-** PC-SPRINT v2 now has its own README with regular development updates [here](PC-SPRINT%20v2/README.md). **
+**PC-SPRINT v2 now has its own README with regular development updates [here](PC-SPRINT%20v2/README.md).**
 
 ## License
 
