@@ -187,7 +187,7 @@ Chips & Technologies MIPS was written by Jim Bracking and released in 1986. It's
 
 |Benchmark|V20 Stock|V20 Turbo|Improvement|
 |---|---|---|---|
-|General Instructions|0.19|.029|52.63%|
+|General Instructions|0.19|0.29|52.63%|
 |Integer Instructions|0.32|0.49|53.12%|
 |Memory To Memory|0.26|0.41|57.69%|
 |Register To Register|0.39|0.60|53.85%|
