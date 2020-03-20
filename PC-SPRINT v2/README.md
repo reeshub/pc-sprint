@@ -26,7 +26,7 @@ The PC-SPRINT v2 files are available [here](KiCAD).
 
 ## Bill Of Materials (BOM) / Component Values
 
-The bill of materials is mostly the same as the original PC-SPRINT. Additional resistors and diodes are the same values as the originals. The only "new" component is an NPN transistor. I'm using a C2120 but just about any small signal NPN transistor should be fine as it's used as a NOT gate and therefore driven to saturation (unbiased).
+The bill of materials is mostly the same as the original PC-SPRINT. Additional resistors and diodes are the same values as the originals. The only new component is an NPN transistor. I'm using a C2120 but just about any small signal NPN transistor should be fine as it's used as a NOT gate and therefore driven to saturation (unbiased).
 
 |Component|Type|Value|
 |---|---|---|
@@ -36,16 +36,16 @@ The bill of materials is mostly the same as the original PC-SPRINT. Additional r
 |C1,C3,C4|Capacitor (Tantalum)|10μF|
 |C2|Capacitor (Ceramic Disc)|.01μF (10nF)|
 |D1,D2,D3,D4,D5,D6|Diode|1N4148|
-|U1|Pin Header|Straight (Bottom of PCB)|
-|U2,U3|DIP Socket|18-Pin<sup>**</sup>|
-|X1|HC49S Crystal Oscillator|22.11MHz<sup>*</sup>|
+|U1|Pin Header|Straight 9 Pin x2 (Bottom of PCB)|
+|U2,U3|DIP Socket|18 Pin<sup>\*</sup>|
+|X1|HC49S Crystal Oscillator|22.11MHz<sup>\*\*</sup>|
 |Q1|NPN Transistor|C2120|
 |J1|Pin Header|90 Degree 4 Pin|
 |J2|Pin Header|90 Degree 2 Pin|
 
-<sup>\** One of these will be populated with a new 8284A IC. The other will house your existing 8284A as removed from the motherboard.</sup>
+<sup>\* One of these will be populated with a new 8284A IC. The other will house your existing 8284A as removed from the motherboard.</sup>
 
-<sup>\* 22.11MHz was the original recommended value and has been tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
+<sup>\*\* 22.11MHz was the original recommended value and has been tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
 
 ### Additional / External Parts To Consider:
 
@@ -60,9 +60,9 @@ In my early research I came to the conclusion that these signals wouldn't be ava
 - HRQDMA: From pin 10 of the 8237 DMA controller IC. This pin goes HIGH on DMA activity.
 - HRQWAIT / DMAWAIT: From pin 7 of an 74LS175 "flip flop" IC labeled U88 on the XT, however I am yet to identify its location on the 5150. The most likely candidate is U26 (next to the DIP switches) but this needs to be confirmed before we hook anything up to it. As above, this pin also goes HIGH on DMA activity.
 
-These inputs are connected to an OR gate and an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH. In the spirit of the original design I have implemented this logic using discrete components, but it could be easily adapted to use [7400 series TTL](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits) instead if you're so inclined.
+These inputs are connected to an OR gate and then an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH. In the spirit of the original design I have implemented this logic using discrete components, but it could be easily adapted to use [7400 series TTL](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits) instead if you're so inclined.
 
-![Old vs. New PC-SPRINT Turbo Switching Logic](PC-SPRINT%20v2/Images/pc-sprint-v2-new-dma-logic.jpg)
+![Old vs. New PC-SPRINT Turbo Switching Logic](Images/pc-sprint-v2-new-dma-logic.jpg)
 
 Original circuit on the left, new additions on the right.
 
