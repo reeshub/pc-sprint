@@ -39,10 +39,12 @@ The bill of materials is mostly the same as the original PC-SPRINT. Additional r
 |U1|Pin Header|Straight (Bottom of PCB)|
 |U2,U3|DIP Socket|18-Pin<sup>**</sup>|
 |X1|HC49S Crystal Oscillator|22.11MHz<sup>*</sup>|
+|Q1|NPN Transistor|C2120|
 |J1|Pin Header|90 Degree 4 Pin|
 |J2|Pin Header|90 Degree 2 Pin|
 
 <sup>\* 22.11MHz was the original recommended value and has been tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
+
 <sup>\** One of these will be populated with a new 8284A IC. The other will house your existing 8284A as removed from the motherboard.</sup>
 
 ### Additional / External Parts To Consider:
@@ -66,9 +68,32 @@ Original circuit on the left, new additions on the right.
 
 ## Current Status
 
+Here are the specs of my IBM 5150 as tested:
+
+|Part|Model|Notes|
+|---|---|---|
+|CPU|[NEC V20](https://en.wikipedia.org/wiki/NEC_V20)|4.77MHz stock / 7.16MHz "turbo" with PC-SPRINT|
+|FPU|[Intel 8087-2](https://en.wikipedia.org/wiki/Intel_8087)|8087 co-processor rated up to 8MHz|
+|RAM|640KB|(256KB onboard, 384KB on SixPakPlus card)<sup>*</sup>|
+|Motherboard|64-256KB [Later Revision](http://www.minuszerodegrees.net/5150/motherboard/5150_motherboard_revisions.htm)|[10/27/82 BIOS](http://minuszerodegrees.net/5150/bios/5150_bios_revisions.htm)|
+|HDD|XT-IDE with 512MB CompactFlash card|Running [IDE_XTP.BIN BIOS](https://www.lo-tech.co.uk/wiki/XTIDE_Universal_BIOS)|
+|Graphics|IBM CGA||
+|Network|3com EtherLink II||
+|Floppy|2x Tandon 360KB 5.25"|Stock IBM Floppy ISA interface|
+|PSU|Standard 110VAC / 63.5W|
+|Operating System|[IBM PC DOS 2000](https://winworldpc.com/product/pc-dos/2000)||
+
+<sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
+
 The PCBs have arrived from [PCBWay](https://www.pcbway.com/) and the v2 is currently undergoing testing. The new design is around 20mm longer than the original, meaning that it now extends underneath the left hand floppy / hard drive (if fitted). Thankfully there is plenty of clearance, however it is recommended that the boards is assemlbed with right angled pin headers as there is minimal space for the cables to protrude upwards. The PCB design may be modified in future but this is not a current priority.
 
 ![Assembled Prototype PC-SPRINT v2](Images/pc-sprint-v2-assembled.jpg)
+
+**The PC-SPRINT v2 is working as intended but without the J2 DMA pins connected. This means that it is permanently in turbo mode and may cause problems with DMA transfers.**
+
+The next step will be to get these connected up and tested, however this will entail an intense oscilloscope session and may involve removal of the motherboard so I am waiting until I have time to schedule this is properly.
+
+For now, based on my experience, the PC-SPRINT (v1 or v2) is perfectly safe to use with a 22.11MHz crystal.
 
 ## Timing Crystal Values Tested
 
