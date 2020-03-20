@@ -1,6 +1,6 @@
 # PC-SPRINT v2
 
-![PC-SPRINT v2 Prototype Installed](Images/pc-sprint-installed.jpg)
+![PC-SPRINT v2 Prototype Installed](Images/pc-sprint-v2-installed.jpg)
 
 Building on the work of Doug Severson in 1985, the PC-SPRINT v2 is an updated and improved DIY overclocking device for 8088-based systems. Please see the [PC-SPRINT README](/blob/master/README.md) for an introduction to the original device.
 
