@@ -55,7 +55,7 @@ The bill of materials is mostly the same as the original PC-SPRINT. Additional r
 
 ## DMA Signals on the 5150 Motherboard
 
-After a lot more confirming using the [IBM Technical Reference](../References/IBM_5150_Technical_Reference_6322507_APR84.pdf), I believe that we can pick these up from what are essentially the same locations as Sergey's design for the 5160. The Turbo8088 and indeed the PC-SPRINT v2 would then be able to incorporate the following:
+After confirming using the [IBM Technical Reference](../References/IBM_5150_Technical_Reference_6322507_APR84.pdf), I believe that we can pick these up from what are essentially the same locations as Sergey's design for the 5160. The Turbo8088 and indeed the PC-SPRINT v2 would then be able to incorporate the following:
 
 - HRQDMA: From pin 10 of the Intel 8237 DMA controller IC. This pin goes HIGH on DMA activity. This part is labelled U35 on the 5150 motherboard. If an AMD part is used (as in my case) it will be have the part number Am9517A.
 - HRQWAIT: From pin 7 of an 74LS175 IC. As above, this pin also goes HIGH on DMA activity. This part is labelled U98 on the 5150 motherboard - note that it is inaccessible with the motherboard in place due to the floppy drive bays.
