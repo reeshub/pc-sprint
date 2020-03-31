@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name PC-SPRINT-rescue)(type Legacy)(uri ${KIPRJMOD}/PC-SPRINT-rescue.lib)(options "")(descr ""))
-)

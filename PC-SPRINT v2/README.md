@@ -22,36 +22,8 @@ I believe that I have succeeded in this, and my PC-SPRINT v2 prototypes are curr
 
 As this started life as a freely available project it only seemed right to release the PC-SPRINT v2 under the GPL. The package includes the KiCAD and gerber files for PCB fabrication. This is an ongoing project and this repo will be regularly updated as new information comes to light from ongoing research and testing.
 
-The PC-SPRINT v2 files are available [here](KiCAD).
-
-## Bill Of Materials (BOM) / Component Values
-
-The bill of materials is mostly the same as the original PC-SPRINT. Additional resistors and diodes are the same values as the originals. The only new component is an NPN transistor. I'm using a C2120 but just about any small signal NPN transistor should be fine as it's used as a NOT gate and therefore driven to saturation (unbiased).
-
-|Component|Type|Value|
-|---|---|---|
-|R1,R2|Resistor|560Ω 0.25W|
-|R3,R9|Resistor|3.3KΩ 0.25W|
-|R4,R5,R6,R7,R8|Resistor|10KΩ 0.25W|
-|C1,C3,C4|Capacitor (Tantalum)|10μF|
-|C2|Capacitor (Ceramic Disc)|.01μF (10nF)|
-|D1,D2,D3,D4,D5,D6|Diode|1N4148|
-|U1|Pin Header|Straight 9 Pin x2 (Bottom of PCB)|
-|U2,U3|DIP Socket|18 Pin<sup>\*</sup>|
-|X1|HC49S Crystal Oscillator|22.11MHz<sup>\*\*</sup>|
-|Q1|NPN Transistor|C2120|
-|J1|Pin Header|90 Degree 4 Pin|
-|J2|Pin Header|90 Degree 2 Pin|
-
-<sup>\* One of these will be populated with a new 8284A IC. The other will house your existing 8284A as removed from the motherboard.</sup>
-
-<sup>\*\* 22.11MHz was the original recommended value and has been successfully tested. For more info on timing crystal speeds see the [Timing Crystal Values Tested](#timing-crystal-values-tested).</sup>
-
-### Additional / External Parts To Consider:
-
-* Switches - 1x momentary (reset) and 1x latching (turbo), exact type depending on intended installation method.
-* Interconnecting cables - 4 conductor ribbon / 2 conductor.
-* DuPont connectors - 4-pin / 2-pin.
+~~The PC-SPRINT v2 files are available [here](KiCAD).~~
+I came up against some problems during some testing that will require a minor redesign. I have decided to make the v2 files unavailable until I at least have a working prototype. For now, if you want a PC-SPRINT, I highly recommend you go build [the original version](../). They're great!
 
 ## DMA Signals on the 5150 Motherboard
 
@@ -64,11 +36,7 @@ After confirming using the [IBM Technical Reference](../References/IBM_5150_Tech
 
 The above picture is taken courtesy of inmbolmie's 5160 installation for the Turbo8088, however these are essentially identical for the 5150. I will update with my own picture when I get a chance to get one.
 
-On the PC-SPRINT v2, these inputs are connected to a new OR gate and then an inverter. When combined with an AND gate on the turbo switch, this should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH. In the spirit of the original design I have implemented this logic using discrete components, but it could be easily adapted to use [7400 series TTL](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits) instead if you're so inclined.
-
-![Old vs. New PC-SPRINT Turbo Switching Logic](Images/pc-sprint-v2-new-dma-logic.jpg)
-
-Original circuit on the left, new additions on the right.
+On the PC-SPRINT v2, these inputs are connected to a new NOR gate along with the turbo button.This should give us the required logic to switch to the lower clock speed if either of these inputs go HIGH. Of course this reverses the function of the turbo button, but it's no big deal (most turbo buttons "back in the day" worked this way anyway).
 
 ## Current Status
 
@@ -76,12 +44,12 @@ Here are the specs of my IBM 5150 as tested:
 
 |Part|Model|Notes|
 |---|---|---|
-|CPU|[NEC V20](https://en.wikipedia.org/wiki/NEC_V20)|4.77MHz stock / 7.16MHz "turbo" with PC-SPRINT|
-|FPU|[Intel 8087-2](https://en.wikipedia.org/wiki/Intel_8087)|8087 co-processor rated up to 8MHz|
-|RAM|640KB|(256KB onboard, 384KB on SixPakPlus card)<sup>*</sup>|
+|CPU|[NEC V20 / D70108C-10](https://en.wikipedia.org/wiki/NEC_V20)|Rated up to 10MHz. 4.77MHz stock / 8MHz "turbo" with PC-SPRINT v2.|
+|FPU|[Intel 8087-1](https://en.wikipedia.org/wiki/Intel_8087)|8087 co-processor rated up to 10MHz.|
+|RAM|640KB (150ns)|(256KB onboard, 384KB on SixPakPlus card)<sup>*</sup>|
 |Motherboard|64-256KB [Later Revision](http://www.minuszerodegrees.net/5150/motherboard/5150_motherboard_revisions.htm)|[10/27/82 BIOS](http://minuszerodegrees.net/5150/bios/5150_bios_revisions.htm)|
 |HDD|XT-IDE with 512MB CompactFlash card|Running [IDE_XTP.BIN BIOS](https://www.lo-tech.co.uk/wiki/XTIDE_Universal_BIOS)|
-|Graphics|IBM CGA||
+|Graphics|IBM EGA||
 |Network|3com EtherLink II||
 |Floppy|2x Tandon 360KB 5.25"|Stock IBM Floppy ISA interface|
 |PSU|Standard 110VAC / 63.5W|
