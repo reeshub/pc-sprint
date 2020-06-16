@@ -19,7 +19,9 @@ This README has become somewhat unwieldy, so here's an index.
 
 ## Introduction to PC-SPRINT
 
-The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable, and I'm sure a whole lot more. It is highly recommended that the CPU be upgraded to an [NEC V20](https://en.wikipedia.org/wiki/NEC_V20) or equivalent, as the standard 8088 shipped with these early machines will probably not run at clock speeds over the original 4.77MHz. Also the 8087 co-processor, if fitted, will need to be a higher clocked version.
+The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable, and I'm sure a whole lot more.
+
+It is highly recommended that the CPU be upgraded to an [NEC V20](https://en.wikipedia.org/wiki/NEC_V20) or equivalent, as the standard 8088 shipped with these early machines will probably not run at clock speeds over the original 4.77MHz. Also the 8087 co-processor, if fitted, will need to be a higher clocked version.
 
 ![My PC-SPRINT Installed In My IBM 5150](Retro%20Canada/Images/Mine/pc-sprint-installed.jpg)
 
@@ -68,7 +70,9 @@ The user built their own based on these files (pictured above - [more of their p
 
 ![My PC-SPRINT Built Using Retro Canada's Gerber Files](Retro%20Canada/Images/Mine/pc-sprint-pcb.jpg)
 
-I also successfully built and tested a PC-SPRINT using Retro Canada's files. I used [PCBWay](https://www.pcbway.com/) for my PCB fabrication. Mine has a 21.47727MHz crystal giving a CPU clock speed of 7.16MHz - the same as the popular [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX) machines. Thankfully after extensive testing I haven't run into any of the issues experienced by Retro Canada, even at this higher speed. I have experimented with 22 and even 24MHz crystals and encountered stability issues at these speeds so I recommend starting at 21.47MHz.
+I also successfully built and tested a PC-SPRINT using Retro Canada's files. I used [PCBWay](https://www.pcbway.com/) for my PCB fabrication. Mine has a 21.47727MHz HC-49S crystal giving a CPU clock speed of 7.16MHz - the same as the popular [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX) machines. Thankfully after extensive testing I haven't run into any of the issues experienced by Retro Canada, even at this higher speed.
+
+I have experimented with 22.11MHz and even 24MHz crystals and encountered stability issues at these speeds, so I recommend starting at 21.47MHz.
 
 #### My Testing
 
@@ -94,7 +98,7 @@ I have done extensive testing with the above system and had no problems whatsoev
 
 The included NOPRTYCHK and WARMBOOT utilities work exactly as advertised with no issues as does the new reset button.
 
-Incidentally, this is how I installed the turbo and reset buttons in the case. Both are 12mm panel mount push buttons - the turbo button is a latching version:
+The picture below shows how I installed the turbo and reset buttons in the case. Both are 12mm panel mount push buttons - the turbo button is a latching version:
 
 ![My PC-SPRINT Reset and Turbo Buttons](Retro%20Canada/Images/Mine/pc-sprint-buttons.jpg)
 
@@ -148,7 +152,7 @@ From [WinWorldPC](https://winworldpc.com/product/checkit/30), who said it better
 
 CheckIt, from TouchStone Software Corporation, is a diagnostic tool for generic PC/XT/AT compatible computers. It can perform tests on RAM, hard disks, video cards, floppy disks, motherboard resources, and I/O devices. It has an easy to use menu interface but can also run tests non-interactively.
 
-I'm running version 3, the last release from 1990. In each of these screenshots the "Stock" value (top grey line) is the (NEC V20) value measured with turbo mode off.
+I'm running version 3, the last release from 1990. In each of these screenshots the "Stock" value (top grey line) is the NEC V20 with turbo mode off.
 
 ![CheckIt CPU Benchmark Before And After Results](Retro%20Canada/Images/Mine/Benchmarks/checkit-main-system-before-after.jpg)
 
