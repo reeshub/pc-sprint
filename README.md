@@ -19,7 +19,7 @@ This README has become somewhat unwieldy, so here's an index.
 
 ## Introduction to PC-SPRINT
 
-The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable, and I'm sure a whole lot more.
+The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable, and I'm sure a whole lot more. Note that the CPU will need to be upgraded to an [NEC V20](https://en.wikipedia.org/wiki/NEC_V20) or equivalent, as the standard 8088 will not run at clock speeds over the original 4.77MHz.
 
 ![My PC-SPRINT Installed In My IBM 5150](Retro%20Canada/Images/Mine/pc-sprint-installed.jpg)
 
@@ -68,7 +68,7 @@ The user built their own based on these files (pictured above - [more of their p
 
 ![My PC-SPRINT Built Using Retro Canada's Gerber Files](Retro%20Canada/Images/Mine/pc-sprint-pcb.jpg)
 
-I also successfully built and tested a PC-SPRINT using Retro Canada's files. I used [PCBWay](https://www.pcbway.com/) for my PCB fabrication. Mine has a 21.47727MHz crystal giving a CPU clock speed of 7.16MHz - the same as the popular [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX) machines. Thankfully after extensive testing I haven't run into any of the issues experienced by Retro Canada, even at this higher speed. I'm yet to experiment with a faster crystal but when I do you'll be the first to know.
+I also successfully built and tested a PC-SPRINT using Retro Canada's files. I used [PCBWay](https://www.pcbway.com/) for my PCB fabrication. Mine has a 21.47727MHz crystal giving a CPU clock speed of 7.16MHz - the same as the popular [Tandy 1000 EX and HX](https://en.wikipedia.org/wiki/Tandy_1000#Tandy_1000_EX_and_HX) machines. Thankfully after extensive testing I haven't run into any of the issues experienced by Retro Canada, even at this higher speed. I have experimented with 22 and even 24MHz crystals and encountered stability issues at these speeds so I recommend starting at 21.47MHz.
 
 #### My Testing
 
@@ -81,13 +81,14 @@ Here are the specs of my IBM 5150 as tested:
 |RAM|640KB|(256KB onboard, 384KB on SixPakPlus card)<sup>*</sup>|
 |Motherboard|64-256KB [Later Revision](http://www.minuszerodegrees.net/5150/motherboard/5150_motherboard_revisions.htm)|[10/27/82 BIOS](http://minuszerodegrees.net/5150/bios/5150_bios_revisions.htm)|
 |HDD|XT-IDE with 512MB CompactFlash card|Running [IDE_XTP.BIN BIOS](https://www.lo-tech.co.uk/wiki/XTIDE_Universal_BIOS)|
-|Graphics|IBM CGA||
+|Graphics|IBM CGA<sup>**</sup>||
 |Network|3com EtherLink II||
 |Floppy|2x Tandon 360KB 5.25"|Stock IBM Floppy ISA interface|
 |PSU|Standard 110VAC / 63.5W|
 |Operating System|[IBM PC DOS 2000](https://winworldpc.com/product/pc-dos/2000)||
 
 <sup>\* All RAM chips were recently replaced with "New Old Stock" [Samsung KM4164B-15](http://www.minuszerodegrees.net/memory/4164.htm) parts, which have a 150ns access time.</sup>
+<sup>\** I have since upgraded to an IBM EGA card (with RAM expansion) and can confirm that the PC-SPRINT works great with this setup. Benchmarks below use the CGA card.</sup>
 
 I have done extensive testing with the above system and had no problems whatsoever. I was expecting issues with DMA activity as others have reported, however have seen none at all. Perhaps this is due to the XT-IDE and its [unusual handling of DMA](https://www.lo-tech.co.uk/xt-cfv3-dma-transfer-mode/). The PC even boots up fine with the turbo mode engaged. Incidentally, cold boot time is 1:02 stock vs. 43 seconds in turbo mode.
 
