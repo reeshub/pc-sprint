@@ -15,7 +15,6 @@ This README has become somewhat unwieldy, so here's an index.
 	- [CheckIt](#checkit) - Results from the CheckIt diagnostic / benchmarking tool.
 	- [MIPS](#mips) - You guessed it. Results from the MIPS benchmarking tool.
 	- [Benchmarking Conclusions](#benchmarking-conclusions) - Conclusions on benchmark results.
-- [PC-SPRINT v2](#pc-sprint-v2) - My attempt at an improved design.
 - [License](#license) - Licensing information for this project and documentation.
 
 ## Introduction to PC-SPRINT
@@ -201,14 +200,6 @@ As we can see, the speedup on all fronts is in the region of 50-55%, which is a 
 
 Finally, of course benchmarks are entirely artificial and don't necessarily reflect real world results. In my testing I have found that, without exception, every single game on this machine (and I have a fair few) is more playable with massively reduced slowdowns and stuttering. That's a hard thing to quantify, however, so with that in mind I am working on a series of comparison videos which should hopefully be available [on my YouTube channel](https://www.youtube.com/ctrlaltrees) soon.
 
-## PC-SPRINT v2
-
-The above is all well and good, of course, but with the potential for DMA-related problems I decided that it would be worth attempting to improve the design. Although I haven't run into these problems myself and I'm not sure how I'll test it, it will be a fun project and an opportunity to teach myself some things about KiCAD, PCB fabrication and early PCs. With all that in mind, the PC-SPRINT v2 will aim to seamlessly switch back to the stock clock speed whenever there is DMA activity, eliminating the possibility of lockups.
-
-![3D Render of PC-SPRINT v2](PC-SPRINT%20v2/Images/render.png)
-
-**PC-SPRINT v2 now has its own README with regular development updates [here](PC-SPRINT%20v2).**
-
 ## License
 
 The PC-SPRINT was originally released with the following licensing conditions:
@@ -222,4 +213,4 @@ The PC-SPRINT was originally released with the following licensing conditions:
 > 5. For-profit organizations may obtain a license by contacting the author.
 > 6. The author will not be held liable for any damages or injuries, direct or subsequent, that may result from its distribution, construction, installation or use.
 
-Attempts have been made to track down the author but to no avail, so this project and the derivative [PC-SPRINT v2](PC-SPRINT%20v2) are shared here in good faith that the sentiments of the original designer will be honoured.
+Attempts have been made to track down the author but to no avail, so this project is shared here in good faith that the sentiments of the original designer will be honoured.
