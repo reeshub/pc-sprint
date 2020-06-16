@@ -5,6 +5,7 @@
 This README has become somewhat unwieldy, so here's an index.
 
 - [Introduction to PC-SPRINT](#introduction-to-pc-sprint) - A quick introduction to the device and how it works.
+  - [YouTube Video](#youtube-video) - A YouTube video for those who aren't keen on reading
 - [Original File Listing](#original-file-listing) - The original design and accompanying files as released by Doug Severson in 1985.
 - [Retro Canada KiCAD Files](#retro-canada-kicad-files) - KiCAD and gerber files drawn up by [VCFed Forum](http://www.vcfed.org/forum/forum.php) user "Retro Canada" for PCB fabrication.
 - [My Own "Retro Canada" Board](#my-own-retro-canada-board) - I had a PCB fabricated and assembled it using the above files.
@@ -32,6 +33,12 @@ The PC-SPRINT also adds a "Turbo" switch as found on later PCs to enable / disab
 When the PC-SPRINT is built with the designer's recommended 22.11MHz crystal the CPU will run at a clock speed of 7.37MHz giving an impressive 64% processing speed increase (on paper). Faster speeds may be possible with faster crystals but were not recommended for stability reasons. Note that in order to utilise this accelerator the original 4.77MHz 8088 CPU must be replaced with either a faster version of the same CPU (e.g. 8088-2) or equivalent clone (e.g. [NEC V20](https://en.wikipedia.org/wiki/NEC_V20), which is highly recommended as it brings other benefits).
 
 Much more information is available in the [original documentation](PCSPRINT.DOC) ([PDF](PCSPRINT.DOC.PDF)).
+
+### YouTube Video
+
+I have now also put together this short introductory video:
+
+[![PC-SPRINT 8088 Overclocking Tool / Accelerator YouTube Video](https://img.youtube.com/vi/8oWyogPZ7Bw/0.jpg)](https://youtu.be/8oWyogPZ7Bw)
 
 ## Original File Listing
 
