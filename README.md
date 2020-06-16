@@ -36,9 +36,9 @@ Much more information is available in the [original documentation](PCSPRINT.DOC)
 
 ### YouTube Video
 
-I have now also put together this short introductory video:
+I have now also put together a short introductory video. Unfortunately it can't be embedded here, so please click the image below to be taken to YouTube:
 
-[![PC-SPRINT 8088 Overclocking Tool / Accelerator YouTube Video](https://img.youtube.com/vi/8oWyogPZ7Bw/0.jpg)](https://youtu.be/8oWyogPZ7Bw)
+[![PC-SPRINT 8088 Overclocking Tool / Accelerator YouTube Video](https://ctrl-alt-rees.com/images/youtube/2020-03-21-pc-sprint-overclocking-the-first-pc-with-a-diy-open-source-hardware-solution-from-1985.jpg)](https://youtu.be/8oWyogPZ7Bw)
 
 ## Original File Listing
 
