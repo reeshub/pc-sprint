@@ -16,6 +16,7 @@ This README has become somewhat unwieldy, so here's an index.
 	- [CheckIt](#checkit) - Results from the CheckIt diagnostic / benchmarking tool.
 	- [MIPS](#mips) - You guessed it. Results from the MIPS benchmarking tool.
 	- [Benchmarking Conclusions](#benchmarking-conclusions) - Conclusions on benchmark results.
+- [Everything Else](#everything-else) - Other interesting documentation and bits and bobs.
 - [License](#license) - Licensing information for this project and documentation.
 
 ## Introduction to PC-SPRINT
@@ -211,6 +212,14 @@ MIPS also shows that our overclocked NEC V20 is over twice as fast as a stock IB
 As we can see, the speedup on all fronts is in the region of 50-55%, which is a massive improvement for around £6 worth of components. According to [MIPS](#mips), with the addition of the V20 and the overclock this machine is now twice as fast as a standard IBM PC. I haven't encountered any stability issues but my testing is ongoing and of course, if I come across them I will document them here.
 
 Finally, of course benchmarks are entirely artificial and don't necessarily reflect real world results. In my testing I have found that, without exception, every single game on this machine (and I have a fair few) is more playable with massively reduced slowdowns and stuttering. That's a hard thing to quantify, however, so with that in mind I am working on a series of comparison videos which should hopefully be available [on my YouTube channel](https://www.youtube.com/ctrlaltrees) soon.
+
+There is now [a general overview of my overclocked IBM 5150 on YouTube](https://youtu.be/Y7NNCWvt1nY) for anyone interested.
+
+### Everything Else
+
+Here I'll collect any other odd bits of info I can find on the PC-SPRINT.
+
+[pcspnt.txt](Everything%20Else/Documents/pcspnt.txt) - PC-SPRINT 1000 by Charles Robertson (1988-08-13). Information relating to the installation of the PC-SPRINT in the Tandy 1000A. \[[source](http://www.oldskool.org/guides/tvdog/documents.html)\]
 
 ## License
 

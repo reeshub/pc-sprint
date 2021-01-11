@@ -1,0 +1,82 @@
+
+Date:13-Aug-88  17:04:37
+Fm: Bob Kaputa 76701,300
+
+To update the PC-Sprint review....
+
+   1.) The Mod is available for the 1000A.
+
+   2.) EXEC-PC no longer handles sales of PC-Sprint. They will cheerfully give
+you the number of the company who does:
+
+               DAS Technologies, Inc.
+               340 W. University Dr.  Suite 17
+               Mesa, AZ   85201
+               (602) 844-1777
+
+
+
+
+                                PC-SPRINT 1000
+                                        by Charles Robertson
+
+    PC-SPRINT  is  a  hardware speed-up modification kit  for  the  "original"
+series of the T1K's.  It is noted several times through the documentation that
+it WILL not work on the "A" series.
+    PC-SPRINT comes complete with two processors,  a  V20  and a 8088-2,   two
+crystals,  a  "chip remover", and a small circuit board.  The instructions are
+clear and concise for the step by step conversion including eight drawings  to
+clarify some of the steps.
+    The first step is quite easy,  finding out which of the two new processors
+you  can use.  (One or the other must be used for the speed-up to work at all)
+Starting with the V20, you swap your current 8088 and reboot.  This is to test
+if  your T1K will run with the V20.   I  ran several of my usual programs  and
+everything checked out.  The V20 will provide the fastest speed-up if your T1K
+can handle it.
+    The second step is also simple.  First you decide,  which "speed"  crystal
+you want to try.  (The two crystals give your T1K an effective speed of 6.67mH
+or  7.37mH depending on which one your T1k can handle...swapping the  crystals
+is  a  simple  task later)  You plug the crystal selected into  the  PC-SPRINT
+board,  pull the clock chip from your motherboard,  plug it into the small PC-
+SPRINT  board,   and  plug the jumper from the PC-SPRINT board back  into  the
+former clock chip socket. The small PC-SPRINT board has two foam "feet" on the
+bottom and just sits on top of the motherboard.
+    If you have a memory board the last step can be a bit taxing.  Hanging off
+the  PC-SPRINT board are two sets of wires.  One set is connected to a  switch
+which  you  mount somewhere on your T1K's case and is used to switch from  the
+normal speed of 4.77mH to the boost speed. The other wire has a small plunger-
+clip attached to it and SHOULD be connected to your expanded memory board.  If
+you  have Radio Shack's 25-1004  memory board,  the instructions give you  the
+proper connecting point.
+    For  this  final step you must pull out the card which contains  your  DMA
+chip  and  cover  one  of the connection points with a  small  piece  of  tape
+(supplied).   The most difficult part for some maybe the next step of  tracing
+the connection,  you just covered, to the first leg of the first chip it hits.
+I  suggest that you do several "tracings"  and see if you keep coming up  with
+the same point.  I FINALLY did and was right.  (I understand that you can call
+and  get very good tech support if you feel you need help during any of  these
+steps.)
+    I  have been running at (advertised)  7.37mH now for several weeks with no
+major problems. One minor glitch, for those of you who turn off your computers
+when  not  in use,  a  power-up boot fills the screen with garbage and give  a
+message of "Memory Error"...however hitting the red RESET button moves my  T1K
+right  along through it's paces.  When exiting PC-PAINTBRUSH at high speed  my
+T1K sometimes gives the message "Invalid COMMAND.COM...System Halted". I  have
+yet  to find any program that chokes on "boost",  at that...you just flip  the
+speed switch if one does...even while the program is running!
+    Unfortunately  I  don't  have  the Norton Utilities  to  give  a  standard
+reference  number.   However a set of speed test programs gave  the  following
+results as referenced to a standard IBM-PC/XT.  With the switch at NORMAL, the
+speed rating was 95%-97%; with the switch at BOOST, the speed rating was 245%-
+252%.
+    PC-SPRINT cost is $99 and can be ordered through EXEC-PC Inc., Post Office
+Box 11268, Shorewood, WI, 53211 ... or ... by  calling 414/242-2173.
+    PC-SPRINT  also comes with a "free trial offer"  (week's  membership)   to
+EXEC-PC BBS. This is NOT just another BBS, EXEC-PC has 16 phone lines that can
+be simultaneously used,  323Mb of programs available for download,  and can be
+accessed through TELENET's PC-PURSUIT program.  PC-PURSUIT's cost is $25/month
+for as many hours as you want.
+
+
+
+
