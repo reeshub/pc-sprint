@@ -21,9 +21,11 @@ This README has become somewhat unwieldy, so here's an index.
 
 ## Introduction to PC-SPRINT
 
-The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable, and I'm sure a whole lot more.
+The PC-SPRINT is a DIY PC accelerator board design released by Doug Severson in 1985 and given away for free in computer magazines and on BBSes of the time. It is designed to allow overclocking of an [Intel 8088](Datasheets/Intel%208088%20Datasheet.pdf)-based computer such as the IBM 5150 / 5155 / 5160 PCs, PCjr, Tandy 1000, Compaq Portable<sup>*</sup>, and I'm sure a whole lot more.
 
 It is highly recommended that the CPU be upgraded to an [NEC V20](https://en.wikipedia.org/wiki/NEC_V20) or equivalent, as the standard 8088 shipped with these early machines will probably not run at clock speeds over the original 4.77MHz. Also the 8087 co-processor, if fitted, will need to be a higher clocked version.
+
+<sup>*</sup> The PC-SPRINT has now been tested with a Compaq Portable 1 and works great! There are a few things to bear in mind which are referenced in issue #1. Many thanks to @cognitivegears for the excellent feedback.
 
 ![My PC-SPRINT Installed In My IBM 5150](Retro%20Canada/Images/Mine/pc-sprint-installed.jpg)
 
